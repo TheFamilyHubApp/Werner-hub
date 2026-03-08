@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Werner Hub 🏠</title>
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACc0lEQVR42u3cwW3CQBCG0fCLyqCktAElpTZyyDlRxCI8s/O+O8iefV4wIE6P2+VDerYYgQASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgLXc2gnf0+fX8Y+9XO5C8hEkACSABJIAkgASQAKreymeAANHDEECv2HsYAmj1lYshgP5L5zcrDAG0+pb5D14A0ePWDKB33a4zBNCqBoYAWnUw3lDoOf4ZAJqrZ7yhzKXz2lWfaihD9bRACdAgPVO3otDDEED11nWModDDEEBV13KAoexP59hV3N1QNtfjMACybADRAxA9GgGIHoDoAYieKZ3R0ewdiB6A6AGIHoDo0RRA9ABED0D0qNHnQOjYgegBiB71AkQPQPSsDqHwHEKPd4E7AqKnyUxScUz09DEUA2JoF0D0NBxUDIWh/oDoaTu0GERvQ0dPL/TYitoCoqf/JHPYCdOzhaGMulwY6g+Inr3GG3oYagKInh1HHXoYKg+Inn1vdbPBOejAqzd9D10VFiL0MFQPED1jDIUehioBomeYodDDUA1A9PQy9KL1SqmjUbutKBUOQn0NhR6GDgJED0NL/1B2v5JXrqcXpcRtvOYFkAASQAJIAEkACSABJIAkgASQANKunWed7tu+rB7ziwM7kAASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgASSABJAAkgASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAEkASSABJAAkgASQAJI+3d63C6mIDuQABJAAkgCSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAEkASQABJAAkgCSAAJIAEkASSABJAAkn76BiuvqLNEcd11AAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACc0lEQVR42u3cwW3CQBCG0fCLyqCktAElpTZyyDlRxCI8s/O+O8iefV4wIE6P2+VDerYYgQASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgLXc2gnf0+fX8Y+9XO5C8hEkACSABJIAkgASQAKreymeAANHDEECv2HsYAmj1lYshgP5L5zcrDAG0+pb5D14A0ePWDKB33a4zBNCqBoYAWnUw3lDoOf4ZAJqrZ7yhzKXz2lWfaihD9bRACdAgPVO3otDDEED11nWModDDEEBV13KAoexP59hV3N1QNtfjMACybADRAxA9GgGIHoDoAYieKZ3R0ewdiB6A6AGIHoDo0RRA9ABED0D0qNHnQOjYgegBiB71AkQPQPSsDqHwHEKPd4E7AqKnyUxScUz09DEUA2JoF0D0NBxUDIWh/oDoaTu0GERvQ0dPL/TYitoCoqf/JHPYCdOzhaGMulwY6g+Inr3GG3oYagKInh1HHXoYKg+Inn1vdbPBOejAqzd9D10VFiL0MFQPED1jDIUehioBomeYodDDUA1A9PQy9KL1SqmjUbutKBUOQn0NhR6GDgJED0NL/1B2v5JXrqcXpcRtvOYFkAASQAJIAEkACSABJIAkgASQANKunWed7tu+rB7ziwM7kAASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgASSABJAAkgASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAEkASSABJAAkgASQAJI+3d63C6mIDuQABJAAkgCSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAEkASQABJAAkgCSAAJIAEkASSABJAAkn76BiuvqLNEcd11AAAAAElFTkSuQmCC" />
+  <script>
+    // Inline manifest so no external file needed
+    const _manifest = {
+      name:"Werner Hub", short_name:"Werner Hub",
+      start_url:"/werner-hub/", scope:"/werner-hub/",
+      display:"standalone", orientation:"portrait",
+      background_color:"#FF8C42", theme_color:"#FF8C42",
+      icons:[
+        {src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAACc0lEQVR42u3cwW3CQBCG0fCLyqCktAElpTZyyDlRxCI8s/O+O8iefV4wIE6P2+VDerYYgQASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgLXc2gnf0+fX8Y+9XO5C8hEkACSABJIAkgASQAKreymeAANHDEECv2HsYAmj1lYshgP5L5zcrDAG0+pb5D14A0ePWDKB33a4zBNCqBoYAWnUw3lDoOf4ZAJqrZ7yhzKXz2lWfaihD9bRACdAgPVO3otDDEED11nWModDDEEBV13KAoexP59hV3N1QNtfjMACybADRAxA9GgGIHoDoAYieKZ3R0ewdiB6A6AGIHoDo0RRA9ABED0D0qNHnQOjYgegBiB71AkQPQPSsDqHwHEKPd4E7AqKnyUxScUz09DEUA2JoF0D0NBxUDIWh/oDoaTu0GERvQ0dPL/TYitoCoqf/JHPYCdOzhaGMulwY6g+Inr3GG3oYagKInh1HHXoYKg+Inn1vdbPBOejAqzd9D10VFiL0MFQPED1jDIUehioBomeYodDDUA1A9PQy9KL1SqmjUbutKBUOQn0NhR6GDgJED0NL/1B2v5JXrqcXpcRtvOYFkAASQAJIAEkACSABJIAkgASQANKunWed7tu+rB7ziwM7kAASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgASSABJAAkgASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAEkASSABJAAkgASQAJI+3d63C6mIDuQABJAAkgCSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAEkASQABJAAkgCSAAJIAEkASSABJAAkn76BiuvqLNEcd11AAAAAElFTkSuQmCC",sizes:"192x192",type:"image/png",purpose:"any maskable"},
+        {src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAIHklEQVR42u3cQXKrShZFUesGIxNDYhpiSIxN7iscli1BiLxnrW51fkHm2aLq/Xe5365fAOQpjwBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABABAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABABAAAAQAAAEAIDmJo8AxrNs5/1nW2fvxxcAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIA57ZsngECAKnrrwEIAOT+9tcABAAS118DSDV5BKRP/8N/tM4eEr4AIGn9fQogABC9/hqAAEDu+msAAgC5668BCADkrr8GIACQu/4agADAqNO/13ZrAAIAQT/8j8sJCAAMs/4+BRAAiF5/DUAAIHf9NQABgNz11wAEAHLXXwMQAMhdfw2gBX8dNKb/7X8Af4M0vgAg9Ae4TwEEAHI3VwMQAMhdWw1AACB3ZzUAAYDchdUABAByt1UDEADYc1LHWlUNQAAgd0z9DdIIAET/lNYABABy11MDEADI3U0NQAAgdzE1AAGA3K3UAAQAfpvI3iupAQgA5I6jPx6KAED0T2MNQAAgdw01AAHA+vvvDgKABfQEQACwfZ4DCAA9J8/qaQACgLHDY0EAMHM+jDwfBADr7ymBAGDXPCsQACyaJwYCgC3z3EAAOPWEWTENQAAwXniMCABmCx9SCADWH08VAcBO4dkiAFgoPGEEANuE54wAYJWAHU0eAaYffAGA9QcBAOsPAgDWHwQArD8IANYfEACsPzAifwwU0w++AMD6gwCA9QcBwPpbfxAArD8gAFh/QACw/sCQ/DFQTD/4AgDrDwKA9QcEAOsPCADWHxAArD8gAFh/YEj+GKjpB3wBYP0BAcD6AwKA9QcEAOsPCADWHxAArD8wJH8M1PQDvgCw/oAAYP0BAcD6AwKA9QcEAOsPCADWHxAArD8wDv8egOkHfAFg/QEBwPoDAoD1BwQA6w8IANYfEACsPzAkfwzU9AO+ALD+gABg/cFBFQBcKnBcBQDXCf5+aJ1bAcD64/QiALg/OMMIAL6g0QAEABcGRxoBwFXBwUYAXBJwvBEA1wNaHXLnXACw/jjtCADuA848AuCLGDQAAXABwBVAABx9cBEQAIceXAcEwHEHlwIBcNChxdVwOwTA+oM7ggD4dQMagAA40ODKIACOMrg4CIBDDK4PAuD4gkuEADi40OoquU0CYP3BnUIAnFRwsxAA36qgAQiAowkuGgLgUILrhgA4juDSIQAOIrh6CIAjCC0uoDsoANYf3EQEwO8O0AAEwFEDFxMBcMjA9UQAHC9wSREABwtcVQHAkYJWF9adFQDrD24uAuB3BGgAAuDogIuMADg04DoLAI4LuNQC4KAArrYAOCKACy4ADgfQ4pq76QLgTIBfewLgKDgK4OILgEMAuP4C4PUDRkAAvHjAFAiAVw4YBAHwsoFWs5C3DOUdA2T+OiyvFiBzKMpLBcici/I6ATJHo7xIgMzpKK8QIHNAyssDyJyR8toAnoxJ0z0pbwsg8zdleUkAmfNSXg9A5siUFwOQOTXllQBkDk55GQCZs1NeA8CL4zP4/pSnD5D5G7Q8dIDMOSqPGyBzlMqDBsicpvKIATIHqjxcgMyZKo8VIHOsJk8T4JDVWmdfANYf8CkgANYf0AABsP6ABnzWif8/gNP+z2fKBEajhfIIAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEA4HCTR8AHrLNn8INl8wzwBQCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACACAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACACAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAP9yud+ungKALwAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAgEffr72qsu7xeqAAAAAASUVORK5CYII=",sizes:"512x512",type:"image/png",purpose:"any maskable"}
+      ]
+    };
+    const _blob = new Blob([JSON.stringify(_manifest)], {type:'application/manifest+json'});
+    const _murl = URL.createObjectURL(_blob);
+    const _ml = document.createElement('link');
+    _ml.rel = 'manifest'; _ml.href = _murl;
+    document.currentScript.parentNode.insertBefore(_ml, document.currentScript);
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-messaging-compat.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito', sans-serif; background: #fdf6f0; }
+    input, textarea, button { font-family: 'Nunito', sans-serif; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: #FFB347; border-radius: 2px; }
+    @keyframes fadeSlideUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn      { from { opacity:0; } to { opacity:1; } }
+    @keyframes popIn       { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
+    @keyframes pulse       { 0%,100% { transform:scale(1); } 50% { transform:scale(1.08); } }
+    .anim-fade-up   { animation: fadeSlideUp .32s cubic-bezier(.22,1,.36,1) both; }
+    .anim-fade-in   { animation: fadeIn .25s ease both; }
+    .anim-pop-in    { animation: popIn .28s cubic-bezier(.22,1,.36,1) both; }
+    .anim-pulse     { animation: pulse 1.8s ease-in-out infinite; }
+    .tab-content    { animation: fadeSlideUp .28s cubic-bezier(.22,1,.36,1) both; }
+    .card-hover     { transition: transform .15s ease, box-shadow .15s ease; }
+    .card-hover:active { transform: scale(.98); box-shadow: 0 1px 4px rgba(255,140,66,.1) !important; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAPClP0MCbKOXyPTLj5eVG9YSU25LtH5Dc",
+    authDomain: "werner-hub.firebaseapp.com",
+    databaseURL: "https://werner-hub-default-rtdb.firebaseio.com",
+    projectId: "werner-hub",
+    storageBucket: "werner-hub.firebasestorage.app",
+    messagingSenderId: "578596882685",
+    appId: "1:578596882685:web:fe0d1812795233b0569694"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const FDB  = firebase.database();
+  const FAuth = firebase.auth();
+
+  function makeFamilyDb(familyId) {
+    return {
+      set: function(key, val) { return FDB.ref('families/' + familyId + '/' + key).set(JSON.stringify(val)); },
+      listen: function(key, cb) {
+        var ref = FDB.ref('families/' + familyId + '/' + key);
+        ref.on('value', function(snap) {
+          if (!snap.exists()) { cb(null); return; }
+          var v = snap.val();
+          try {
+            var parsed = typeof v === 'string' ? JSON.parse(v) : v;
+            // If Firebase stored array as object with numeric keys, convert back to array
+            if (parsed !== null && typeof parsed === 'object' && !Array.isArray(parsed)) {
+              var keys = Object.keys(parsed);
+              var isNumeric = keys.every(function(k) { return !isNaN(k); });
+              if (isNumeric) { parsed = keys.sort(function(a,b){return a-b;}).map(function(k){return parsed[k];}); }
+            }
+            cb(parsed);
+          } catch(e) { cb(null); }
+        });
+        return function() { ref.off('value'); };
+      }
+    };
+  }
+
+  function genInviteCode() {
+    return Math.random().toString(36).substring(2, 8).toUpperCase();
+  }
+
+  function friendlyAuthError(code) {
+    var map = {
+      'auth/email-already-in-use': 'That email is already registered. Try signing in.',
+      'auth/wrong-password': 'Incorrect password.',
+      'auth/user-not-found': 'No account found with that email.',
+      'auth/weak-password': 'Password must be at least 6 characters.',
+      'auth/invalid-email': 'Please enter a valid email address.',
+      'auth/too-many-requests': 'Too many attempts. Please wait a moment and try again.',
+      'auth/invalid-credential': 'Incorrect email or password.'
+    };
+    return map[code] || 'Something went wrong. Please try again.';
+  }
+
+  var messaging = null;
+  try { messaging = firebase.messaging(); } catch(e) {}
+
+  function enableNotifications(userId) {
+    if (!messaging || !('Notification' in window)) return Promise.resolve(false);
+    return Notification.requestPermission().then(function(perm) {
+      if (perm !== 'granted') return false;
+      return navigator.serviceWorker.ready.then(function(sw) {
+        return messaging.getToken({
+          vapidKey: 'BFDTvvpMoi8-SqDja9PSVRad0AFNDz1aerFjlL-B_ziIrrWvEibSiJvJhTHLDbtQ8gsncS_R0Izsn6_keSbnsdI',
+          serviceWorkerRegistration: sw
+        });
+      }).then(function(token) {
+        if (token) FDB.ref('wh/fcm-tokens/' + userId).set(token);
+        return true;
+      });
+    }).catch(function() { return false; });
+  }
+
+  if (messaging) {
+    messaging.onMessage(function(payload) {
+      if (Notification.permission === 'granted' && payload.notification) {
+        new Notification(payload.notification.title || 'Werner Hub', { body: payload.notification.body });
+      }
+    });
+  }
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('./firebase-messaging-sw.js').catch(function(){});
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault(); window.__installPrompt = e;
+        window.dispatchEvent(new Event('pwa-installable'));
+      });
+    });
+  }
+  // ── Biometric / WebAuthn helpers ──────────────────────────────────────────
+  function biometricSupported() {
+    return window.PublicKeyCredential !== undefined &&
+           typeof PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable === 'function';
+  }
+
+  function getBiometricCredId(uid) {
+    try { return localStorage.getItem('wh-biometric-' + uid); } catch(e) { return null; }
+  }
+
+  function setBiometricCredId(uid, credId) {
+    try { localStorage.setItem('wh-biometric-' + uid, credId); } catch(e) {}
+  }
+
+  function clearBiometricCredId(uid) {
+    try { localStorage.removeItem('wh-biometric-' + uid); } catch(e) {}
+  }
+
+  function strToUint8(str) {
+    return Uint8Array.from(str, function(c) { return c.charCodeAt(0); });
+  }
+
+  function uint8ToBase64(arr) {
+    return btoa(String.fromCharCode.apply(null, new Uint8Array(arr)));
+  }
+
+  function base64ToUint8(b64) {
+    return Uint8Array.from(atob(b64), function(c) { return c.charCodeAt(0); });
+  }
+
+  async function registerBiometric(uid, displayName) {
+    if (!biometricSupported()) throw new Error('Not supported');
+    var challenge = window.crypto.getRandomValues(new Uint8Array(32));
+    var userId = strToUint8(uid.slice(0, 64).padEnd(16, '0'));
+    var hostname = window.location.hostname || 'localhost';
+    var cred = await navigator.credentials.create({
+      publicKey: {
+        challenge: challenge,
+        rp: { name: 'Werner Hub', id: hostname },
+        user: { id: userId, name: displayName, displayName: displayName },
+        pubKeyCredParams: [{ alg: -7, type: 'public-key' }, { alg: -257, type: 'public-key' }],
+        authenticatorSelection: { authenticatorAttachment: 'platform', userVerification: 'required', residentKey: 'preferred' },
+        timeout: 60000
+      }
+    });
+    var credId = uint8ToBase64(cred.rawId);
+    setBiometricCredId(uid, credId);
+    return credId;
+  }
+
+  async function verifyBiometric(uid) {
+    if (!biometricSupported()) throw new Error('Not supported');
+    var credIdB64 = getBiometricCredId(uid);
+    if (!credIdB64) throw new Error('No credential registered');
+    var challenge = window.crypto.getRandomValues(new Uint8Array(32));
+    var hostname = window.location.hostname || 'localhost';
+    var allowCreds = [{ id: base64ToUint8(credIdB64), type: 'public-key' }];
+    await navigator.credentials.get({
+      publicKey: { challenge: challenge, allowCredentials: allowCreds, userVerification: 'required', rpId: hostname, timeout: 60000 }
+    });
+    return true;
+  }
+
+</script>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+const PALETTE = ['#FF6B6B','#FFB347','#6BCB77','#4D96FF','#C77DFF','#FF6FC8','#00C9A7','#F9C74F'];
+const AVATARS  = ['🦁','🐻','🦊','🐼','🦋','🐸','🦄','🐙','🌻','⭐','🍉','🚀','🎅','👽','🐧','❄️','🦕'];
+const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+// ── Shared UI ──────────────────────────────────────────────────────────────
+
+function Chip({ color, label }) {
+  return <span style={{ background:color+'22', color, borderRadius:20, padding:'2px 10px', fontSize:11, fontWeight:700 }}>{label}</span>;
+}
+
+function Avatar({ m, size=40 }) {
+  if (m && m.photo) return (
+    <img src={m.photo} alt="" style={{ width:size, height:size, borderRadius:'50%', objectFit:'cover', flexShrink:0, border:`2px solid ${m.color||'#ccc'}` }} />
+  );
+  return (
+    <div style={{ width:size, height:size, borderRadius:'50%', background:m?m.color:'#eee', display:'flex', alignItems:'center', justifyContent:'center', fontSize:size*.46, flexShrink:0 }}>
+      {m ? m.avatar : '?'}
+    </div>
+  );
+}
+
+function Card({ children, style, animate=false }) {
+  return <div className={animate ? 'card-hover' : ''} style={{ background:'white', borderRadius:18, padding:16, boxShadow:'0 2px 12px rgba(255,140,66,.10)', ...style }}>{children}</div>;
+}
+
+function Btn({ children, onClick, color='#FF8C42', outline=false, disabled=false, style={} }) {
+  return (
+    <button onClick={onClick} disabled={disabled} style={{ padding:'11px 18px', borderRadius:12, border:outline?`2px solid ${color}`:'none', background:outline?'transparent':disabled?'#ddd':color, color:outline?color:disabled?'#aaa':'white', fontWeight:800, fontSize:14, cursor:disabled?'not-allowed':'pointer', fontFamily:'inherit', opacity:disabled?.7:1, ...style }}>
+      {children}
+    </button>
+  );
+}
+
+function Inp({ value, onChange, placeholder, type='text', style={}, ...rest }) {
+  return (
+    <input type={type} value={value} onChange={onChange} placeholder={placeholder}
+      style={{ border:'2px solid #f0e4d8', borderRadius:12, padding:'10px 14px', fontSize:15, outline:'none', background:'#fffaf6', width:'100%', ...style }}
+      {...rest}
+    />
+  );
+}
+
+function Loading() {
+  return (
+    <div style={{ minHeight:'100vh', display:'flex', alignItems:'center', justifyContent:'center', background:'linear-gradient(160deg,#FF8C42,#FF6FC8)' }}>
+      <div style={{ textAlign:'center', color:'white' }}>
+        <div style={{ fontSize:52, marginBottom:12 }}>🏠</div>
+        <div style={{ fontSize:20, fontWeight:900, marginBottom:8 }}>Werner Hub</div>
+        <div style={{ fontSize:14, opacity:.8 }}>Loading…</div>
+      </div>
+    </div>
+  );
+}
+
+function ErrMsg({ msg }) {
+  if (!msg) return null;
+  return <div style={{ background:'#fff0f0', border:'1.5px solid #FF4757', borderRadius:10, padding:'10px 14px', color:'#FF4757', fontWeight:700, fontSize:13, marginBottom:12 }}>{msg}</div>;
+}
+
+function AvatarPicker({ avatarIdx, setAvatarIdx, colorIdx, setColorIdx, photo, compact=false }) {
+  return (
+    <>
+      <div style={{ fontSize:11, fontWeight:700, color:'#888', textTransform:'uppercase', letterSpacing:.5, marginBottom:8 }}>Avatar</div>
+      <div style={{ display:'flex', flexWrap:'wrap', gap:compact?4:6, marginBottom:14 }}>
+        {AVATARS.map((a,i) => (
+          <button key={a} onClick={()=>setAvatarIdx(i)} style={{ width:compact?34:40, height:compact?34:40, border:`2px solid ${i===avatarIdx?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:i===avatarIdx?'#fff5ee':'white', fontSize:compact?18:21, cursor:'pointer' }}>{a}</button>
+        ))}
+      </div>
+      <div style={{ fontSize:11, fontWeight:700, color:'#888', textTransform:'uppercase', letterSpacing:.5, marginBottom:8 }}>Color</div>
+      <div style={{ display:'flex', gap:8, marginBottom:16, flexWrap:'wrap' }}>
+        {PALETTE.map((c,i) => (
+          <button key={c} onClick={()=>setColorIdx(i)} style={{ width:32, height:32, borderRadius:'50%', background:c, border:i===colorIdx?'3px solid #333':'3px solid transparent', cursor:'pointer' }} />
+        ))}
+      </div>
+    </>
+  );
+}
+
+// ── Auth Screens ───────────────────────────────────────────────────────────
+
+function WelcomeScreen({ onCreateFamily, onJoinFamily, onSignIn }) {
+  return (
+    <div style={{ minHeight:'100vh', background:'linear-gradient(160deg,#FF8C42,#FF6FC8)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:32 }}>
+      <div style={{ fontSize:64, marginBottom:12 }}>🏠</div>
+      <h1 style={{ color:'white', fontWeight:900, fontSize:30, marginBottom:6 }}>Werner Hub</h1>
+      <p style={{ color:'rgba(255,255,255,.85)', fontSize:15, marginBottom:40, textAlign:'center' }}>Your family's command center</p>
+      <div style={{ width:'100%', maxWidth:360, display:'flex', flexDirection:'column', gap:12 }}>
+        <button onClick={onCreateFamily} style={{ padding:'16px 24px', borderRadius:16, border:'none', background:'white', color:'#FF8C42', fontWeight:900, fontSize:16, cursor:'pointer', fontFamily:'inherit', boxShadow:'0 4px 20px rgba(0,0,0,.15)' }}>
+          🏡 Create Family Account
+        </button>
+        <button onClick={onJoinFamily} style={{ padding:'16px 24px', borderRadius:16, border:'2.5px solid rgba(255,255,255,.7)', background:'transparent', color:'white', fontWeight:900, fontSize:16, cursor:'pointer', fontFamily:'inherit' }}>
+          🔗 Join a Family
+        </button>
+        <button onClick={onSignIn} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:14, fontWeight:700, cursor:'pointer', marginTop:8, fontFamily:'inherit' }}>
+          Already have an account? Sign in →
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function SignInScreen({ onBack }) {
+  const [email, setEmail]       = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError]       = useState('');
+  const [loading, setLoading]   = useState(false);
+
+  const signIn = async () => {
+    if (!email || !password) { setError('Please fill in all fields.'); return; }
+    setLoading(true); setError('');
+    try {
+      await FAuth.signInWithEmailAndPassword(email.trim(), password);
+    } catch(e) {
+      setError(friendlyAuthError(e.code));
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div style={{ minHeight:'100vh', background:'linear-gradient(160deg,#FF8C42,#FF6FC8)', padding:'32px 20px', display:'flex', flexDirection:'column', alignItems:'center' }}>
+      <div style={{ width:'100%', maxWidth:400 }}>
+        <button onClick={onBack} style={{ background:'none', border:'none', color:'white', fontSize:14, fontWeight:700, cursor:'pointer', marginBottom:24, fontFamily:'inherit' }}>← Back</button>
+        <div style={{ fontSize:40, textAlign:'center', marginBottom:8 }}>👋</div>
+        <h2 style={{ color:'white', fontWeight:900, fontSize:24, textAlign:'center', marginBottom:24 }}>Welcome back!</h2>
+        <Card>
+          <ErrMsg msg={error} />
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>EMAIL</div>
+          <Inp value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@email.com" type="email" style={{ marginBottom:14 }} />
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>PASSWORD</div>
+          <Inp value={password} onChange={e=>setPassword(e.target.value)} placeholder="••••••••" type="password" style={{ marginBottom:20 }} onKeyDown={e=>e.key==='Enter'&&signIn()} />
+          <Btn onClick={signIn} disabled={loading} style={{ width:'100%' }}>{loading ? 'Signing in…' : 'Sign In'}</Btn>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+function CreateFamilyScreen({ onBack }) {
+  const [step, setStep]         = useState(1);
+  const [email, setEmail]       = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPw, setConfirmPw] = useState('');
+  const [fname, setFname]       = useState('Werner');
+  const [myName, setMyName]     = useState('');
+  const [avatarIdx, setAvatarIdx] = useState(0);
+  const [colorIdx, setColorIdx]  = useState(0);
+  const [error, setError]       = useState('');
+  const [loading, setLoading]   = useState(false);
+
+  const nextStep = () => {
+    setError('');
+    if (!email || !password || !confirmPw) { setError('Please fill in all fields.'); return; }
+    if (password !== confirmPw) { setError("Passwords don't match."); return; }
+    if (password.length < 6) { setError('Password must be at least 6 characters.'); return; }
+    setStep(2);
+  };
+
+  const create = async () => {
+    if (!myName.trim() || !fname.trim()) { setError('Please enter your name and family name.'); return; }
+    setLoading(true); setError('');
+    try {
+      const cred = await FAuth.createUserWithEmailAndPassword(email.trim(), password);
+      const uid = cred.user.uid;
+      const familyId = FDB.ref('families').push().key;
+      const memberId = Date.now().toString();
+      const inviteCode = genInviteCode();
+      const member = { id:memberId, uid, name:myName.trim(), role:'parent', avatar:AVATARS[avatarIdx], color:PALETTE[colorIdx], photo:null, balance:0 };
+      await FDB.ref('families/' + familyId + '/fname').set(JSON.stringify(fname.trim()));
+      await FDB.ref('families/' + familyId + '/inviteCode').set(JSON.stringify(inviteCode));
+      await FDB.ref('families/' + familyId + '/members').set(JSON.stringify([member]));
+      await FDB.ref('inviteCodes/' + inviteCode).set(JSON.stringify({ familyId: familyId, fname: fname.trim() }));
+      await FDB.ref('users/' + uid).set(JSON.stringify({ familyId, memberId }));
+      // Auth observer in WernerHub will pick up the new user automatically
+    } catch(e) {
+      setError(friendlyAuthError(e.code));
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div style={{ minHeight:'100vh', background:'linear-gradient(160deg,#FF8C42,#FF6FC8)', padding:'32px 20px', display:'flex', flexDirection:'column', alignItems:'center', overflowY:'auto' }}>
+      <div style={{ width:'100%', maxWidth:400 }}>
+        <button onClick={step===1?onBack:()=>setStep(1)} style={{ background:'none', border:'none', color:'white', fontSize:14, fontWeight:700, cursor:'pointer', marginBottom:24, fontFamily:'inherit' }}>← Back</button>
+        <div style={{ fontSize:40, textAlign:'center', marginBottom:8 }}>🏡</div>
+        <h2 style={{ color:'white', fontWeight:900, fontSize:24, textAlign:'center', marginBottom:6 }}>Create Your Family</h2>
+        <p style={{ color:'rgba(255,255,255,.8)', fontSize:13, textAlign:'center', marginBottom:24 }}>Step {step} of 2</p>
+        <Card>
+          <ErrMsg msg={error} />
+          {step === 1 ? (
+            <>
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>EMAIL</div>
+              <Inp value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@email.com" type="email" style={{ marginBottom:14 }} />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>PASSWORD</div>
+              <Inp value={password} onChange={e=>setPassword(e.target.value)} placeholder="At least 6 characters" type="password" style={{ marginBottom:14 }} />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>CONFIRM PASSWORD</div>
+              <Inp value={confirmPw} onChange={e=>setConfirmPw(e.target.value)} placeholder="••••••••" type="password" style={{ marginBottom:20 }} />
+              <Btn onClick={nextStep} style={{ width:'100%' }}>Next →</Btn>
+            </>
+          ) : (
+            <>
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>FAMILY NAME</div>
+              <Inp value={fname} onChange={e=>setFname(e.target.value)} placeholder="e.g. Werner" style={{ marginBottom:14 }} />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>YOUR NAME</div>
+              <Inp value={myName} onChange={e=>setMyName(e.target.value)} placeholder="e.g. Mom" style={{ marginBottom:14 }} autoFocus />
+              <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:14 }}>
+                <Avatar m={{ avatar:AVATARS[avatarIdx], color:PALETTE[colorIdx] }} size={56} />
+                <div style={{ flex:1, fontSize:13, color:'#aaa' }}>Choose your look below</div>
+              </div>
+              <AvatarPicker avatarIdx={avatarIdx} setAvatarIdx={setAvatarIdx} colorIdx={colorIdx} setColorIdx={setColorIdx} />
+              <Btn onClick={create} disabled={loading} style={{ width:'100%' }} color="#6BCB77">{loading ? 'Creating…' : "🎉 Create Family!"}</Btn>
+            </>
+          )}
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+function JoinFamilyScreen({ onBack }) {
+  const [step, setStep]         = useState(1);
+  const [code, setCode]         = useState('');
+  const [familyId, setFamilyId] = useState(null);
+  const [familyName, setFamilyName] = useState('');
+  const [email, setEmail]       = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPw, setConfirmPw] = useState('');
+  const [myName, setMyName]     = useState('');
+  const [role, setRole]         = useState('kid');
+  const [avatarIdx, setAvatarIdx] = useState(0);
+  const [colorIdx, setColorIdx]  = useState(2);
+  const [error, setError]       = useState('');
+  const [loading, setLoading]   = useState(false);
+
+  const validateCode = async () => {
+    if (!code.trim()) { setError('Please enter the invite code.'); return; }
+    setLoading(true); setError('');
+    try {
+      const snap = await FDB.ref('inviteCodes/' + code.trim().toUpperCase()).once('value');
+      if (!snap.exists()) { setError('Invite code not found. Double-check and try again.'); setLoading(false); return; }
+      const codeData = snap.val();
+      const fid = typeof codeData === 'string' ? codeData : codeData.familyId;
+      const fn  = typeof codeData === 'object' && codeData.fname ? codeData.fname : 'Your Family';
+      setFamilyId(fid);
+      setFamilyName(fn);
+      setStep(2);
+      setLoading(false);
+    } catch(e) { setError('Something went wrong. Try again.'); setLoading(false); }
+  };
+
+  const join = async () => {
+    if (!myName.trim()) { setError('Please enter your name.'); return; }
+    if (!email || !password || !confirmPw) { setError('Please fill in all fields.'); return; }
+    if (password !== confirmPw) { setError("Passwords don't match."); return; }
+    if (password.length < 6) { setError('Password must be at least 6 characters.'); return; }
+    setLoading(true); setError('');
+    try {
+      const cred = await FAuth.createUserWithEmailAndPassword(email.trim(), password);
+      const uid = cred.user.uid;
+      const memberId = Date.now().toString();
+      const member = { id:memberId, uid, name:myName.trim(), role, avatar:AVATARS[avatarIdx], color:PALETTE[colorIdx], photo:null, balance:0 };
+      // Write user record FIRST so onAuthStateChanged finds it immediately
+      await FDB.ref('users/' + uid).set(JSON.stringify({ familyId, memberId }));
+      const snap = await FDB.ref('families/' + familyId + '/members').once('value');
+      const existing = snap.exists() ? JSON.parse(snap.val()) : [];
+      await FDB.ref('families/' + familyId + '/members').set(JSON.stringify([...existing, member]));
+    } catch(e) { setError(friendlyAuthError(e.code)); setLoading(false); }
+  };
+
+  return (
+    <div style={{ minHeight:'100vh', background:'linear-gradient(160deg,#FF8C42,#FF6FC8)', padding:'32px 20px', display:'flex', flexDirection:'column', alignItems:'center', overflowY:'auto' }}>
+      <div style={{ width:'100%', maxWidth:400 }}>
+        <button onClick={step===1?onBack:()=>setStep(1)} style={{ background:'none', border:'none', color:'white', fontSize:14, fontWeight:700, cursor:'pointer', marginBottom:24, fontFamily:'inherit' }}>← Back</button>
+        <div style={{ fontSize:40, textAlign:'center', marginBottom:8 }}>🔗</div>
+        <h2 style={{ color:'white', fontWeight:900, fontSize:24, textAlign:'center', marginBottom:6 }}>Join a Family</h2>
+        {step===2 && <p style={{ color:'rgba(255,255,255,.9)', fontSize:14, textAlign:'center', fontWeight:700, marginBottom:16 }}>Joining: {familyName} 🏠</p>}
+        <p style={{ color:'rgba(255,255,255,.8)', fontSize:13, textAlign:'center', marginBottom:24 }}>Step {step} of 2</p>
+        <Card>
+          <ErrMsg msg={error} />
+          {step === 1 ? (
+            <>
+              <div style={{ fontSize:13, color:'#888', marginBottom:14, lineHeight:1.5 }}>Ask a parent for the 6-character family invite code from their Account tab.</div>
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>INVITE CODE</div>
+              <input
+                value={code} onChange={e=>setCode(e.target.value.toUpperCase())}
+                placeholder="ABC123"
+                maxLength={6}
+                style={{ border:'2px solid #f0e4d8', borderRadius:12, padding:'10px 14px', fontSize:22, fontWeight:900, outline:'none', background:'#fffaf6', width:'100%', marginBottom:20, letterSpacing:4, textAlign:'center', textTransform:'uppercase' }}
+              />
+              <Btn onClick={validateCode} disabled={loading} style={{ width:'100%' }}>{loading ? 'Checking…' : 'Check Code →'}</Btn>
+            </>
+          ) : (
+            <>
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>YOUR NAME</div>
+              <Inp value={myName} onChange={e=>setMyName(e.target.value)} placeholder="e.g. Wesley" style={{ marginBottom:14 }} autoFocus />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:8 }}>ROLE</div>
+              <div style={{ display:'flex', gap:8, marginBottom:14 }}>
+                {['parent','kid'].map(r => (
+                  <button key={r} onClick={()=>setRole(r)} style={{ flex:1, padding:'9px 0', border:`2px solid ${role===r?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:role===r?'#fff5ee':'white', color:role===r?'#FF8C42':'#aaa', fontWeight:800, cursor:'pointer', fontSize:13, fontFamily:'inherit' }}>
+                    {r==='parent'?'👨‍👩 Parent':'🧒 Kid'}
+                  </button>
+                ))}
+              </div>
+              <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:14 }}>
+                <Avatar m={{ avatar:AVATARS[avatarIdx], color:PALETTE[colorIdx] }} size={50} />
+                <div style={{ flex:1, fontSize:13, color:'#aaa' }}>Pick your look</div>
+              </div>
+              <AvatarPicker avatarIdx={avatarIdx} setAvatarIdx={setAvatarIdx} colorIdx={colorIdx} setColorIdx={setColorIdx} compact />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>EMAIL</div>
+              <Inp value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@email.com" type="email" style={{ marginBottom:14 }} />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>PASSWORD</div>
+              <Inp value={password} onChange={e=>setPassword(e.target.value)} placeholder="At least 6 characters" type="password" style={{ marginBottom:14 }} />
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>CONFIRM PASSWORD</div>
+              <Inp value={confirmPw} onChange={e=>setConfirmPw(e.target.value)} placeholder="••••••••" type="password" style={{ marginBottom:20 }} />
+              <Btn onClick={join} disabled={loading} style={{ width:'100%' }} color="#6BCB77">{loading ? 'Joining…' : '🎉 Join Family!'}</Btn>
+            </>
+          )}
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// ── Chores ──────────────────────────────────────────────────────────────────
+
+// ── Home Dashboard ────────────────────────────────────────────────────────────
+
+function ActivityLog({ activity, members }) {
+  if (!activity || activity.length === 0) return (
+    <div style={{ textAlign:'center', color:'#ccc', fontSize:13, padding:'16px 0' }}>No activity yet — get started!</div>
+  );
+  return (
+    <div>
+      {activity.slice(0, 20).map((a, idx) => (
+        <div key={a.id} className="anim-fade-up" style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 0', borderBottom:'1px solid #f8f0ea', animationDelay: (idx * 0.04) + 's' }}>
+          <div style={{ width:34, height:34, borderRadius:'50%', background:'#fff5ee', display:'flex', alignItems:'center', justifyContent:'center', fontSize:17, flexShrink:0 }}>{a.icon || '📌'}</div>
+          <div style={{ flex:1 }}>
+            <div style={{ fontSize:14, color:'#333', fontWeight:600 }}>{a.text}</div>
+            <div style={{ fontSize:11, color:'#bbb', marginTop:2 }}>
+              {(function() {
+                var diff = Date.now() - a.at;
+                if (diff < 60000) return 'Just now';
+                if (diff < 3600000) return Math.floor(diff/60000) + 'm ago';
+                if (diff < 86400000) return Math.floor(diff/3600000) + 'h ago';
+                return Math.floor(diff/86400000) + 'd ago';
+              })()}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function HomeTab({ me, members, chores, shopping, messages, activity, events, familyName, setTab }) {
+  const isParent = me.role === 'parent';
+  const kids = members.filter(m => m.role === 'kid');
+  const myChores = chores.filter(c => (c.assignedTo === me.id || c.assignedTo === 'anyone') && c.status === 'pending');
+  const pendingApproval = chores.filter(c => c.status === 'completed');
+  const totalOwed = kids.reduce((sum, k) => sum + (k.balance||0), 0);
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+
+      {/* Greeting */}
+      <div className="anim-fade-up" style={{ marginBottom:20 }}>
+        <div style={{ fontSize:13, color:'#aaa', fontWeight:700, marginBottom:2 }}>{greeting} 👋</div>
+        <div style={{ fontSize:24, fontWeight:900, color:'#333' }}>{me.name}</div>
+      </div>
+
+      {/* Parent stat cards */}
+      {isParent && (
+        <div className="anim-fade-up" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:16, animationDelay:'.04s' }}>
+          <div onClick={()=>setTab('chores')} className="card-hover" style={{ background: pendingApproval.length > 0 ? 'linear-gradient(135deg,#FF8C42,#FF6FC8)' : 'white', borderRadius:16, padding:16, cursor:'pointer', boxShadow:'0 2px 12px rgba(255,140,66,.15)' }}>
+            <div style={{ fontSize:28, marginBottom:6 }}>✅</div>
+            <div style={{ fontSize:22, fontWeight:900, color: pendingApproval.length > 0 ? 'white' : '#333' }}>{pendingApproval.length}</div>
+            <div style={{ fontSize:12, fontWeight:700, color: pendingApproval.length > 0 ? 'rgba(255,255,255,.85)' : '#aaa' }}>Need Approval</div>
+          </div>
+          <div onClick={()=>setTab('allowance')} className="card-hover" style={{ background: totalOwed > 0 ? 'linear-gradient(135deg,#6BCB77,#4D96FF)' : 'white', borderRadius:16, padding:16, cursor:'pointer', boxShadow:'0 2px 12px rgba(107,203,119,.15)' }}>
+            <div style={{ fontSize:28, marginBottom:6 }}>💰</div>
+            <div style={{ fontSize:22, fontWeight:900, color: totalOwed > 0 ? 'white' : '#333' }}>${totalOwed.toFixed(2)}</div>
+            <div style={{ fontSize:12, fontWeight:700, color: totalOwed > 0 ? 'rgba(255,255,255,.85)' : '#aaa' }}>Total Owed</div>
+          </div>
+          <div onClick={()=>setTab('shopping')} className="card-hover" style={{ background:'white', borderRadius:16, padding:16, cursor:'pointer', boxShadow:'0 2px 12px rgba(255,140,66,.10)' }}>
+            <div style={{ fontSize:28, marginBottom:6 }}>🛒</div>
+            <div style={{ fontSize:22, fontWeight:900, color:'#333' }}>{(shopping||[]).filter(i=>!i.done).length}</div>
+            <div style={{ fontSize:12, fontWeight:700, color:'#aaa' }}>Items Left</div>
+          </div>
+          <div onClick={()=>setTab('chat')} className="card-hover" style={{ background:'white', borderRadius:16, padding:16, cursor:'pointer', boxShadow:'0 2px 12px rgba(255,140,66,.10)' }}>
+            <div style={{ fontSize:28, marginBottom:6 }}>💬</div>
+            <div style={{ fontSize:22, fontWeight:900, color:'#333' }}>{members.length}</div>
+            <div style={{ fontSize:12, fontWeight:700, color:'#aaa' }}>Family Members</div>
+          </div>
+        </div>
+      )}
+
+      {/* Kid: my chores */}
+      {!isParent && myChores.length > 0 && (
+        <Card animate style={{ marginBottom:16, animationDelay:'.04s' }} className="anim-fade-up">
+          <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:12 }}>📋 My Chores</div>
+          {myChores.slice(0,3).map(c => (
+            <div key={c.id} style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 0', borderBottom:'1px solid #f8f0ea' }}>
+              <div style={{ width:8, height:8, borderRadius:'50%', background:'#FFB347', flexShrink:0 }} />
+              <span style={{ fontSize:14, color:'#333', flex:1 }}>{c.title}</span>
+              {c.points > 0 && <Chip color="#FF8C42" label={'$' + parseFloat(c.points).toFixed(2)} />}
+            </div>
+          ))}
+          {myChores.length > 3 && <div style={{ fontSize:12, color:'#aaa', textAlign:'center', marginTop:8 }}>+{myChores.length - 3} more</div>}
+          <button onClick={()=>setTab('chores')} style={{ width:'100%', marginTop:12, padding:'9px 0', border:'2px solid #FF8C42', borderRadius:10, background:'#fff5ee', color:'#FF8C42', fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:'inherit' }}>View All Chores →</button>
+        </Card>
+      )}
+
+      {/* Kid: my balance */}
+      {!isParent && (
+        <Card animate style={{ marginBottom:16, animationDelay:'.08s' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:14 }}>
+            <div style={{ fontSize:40 }}>💰</div>
+            <div>
+              <div style={{ fontSize:13, color:'#aaa', fontWeight:700 }}>My Balance</div>
+              <div style={{ fontSize:30, fontWeight:900, color:'#6BCB77' }}>${(me.balance||0).toFixed(2)}</div>
+            </div>
+            {(me.balance||0) > 0 && (
+              <button onClick={()=>setTab('allowance')} style={{ marginLeft:'auto', padding:'8px 14px', border:'none', borderRadius:10, background:'linear-gradient(135deg,#6BCB77,#4D96FF)', color:'white', fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:'inherit' }}>Cash In 💸</button>
+            )}
+          </div>
+        </Card>
+      )}
+
+      {/* Parent: kids balances */}
+      {isParent && kids.length > 0 && (
+        <Card animate style={{ marginBottom:16, animationDelay:'.08s' }}>
+          <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:12 }}>💰 Kids' Balances</div>
+          {kids.map(k => (
+            <div key={k.id} style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 0', borderBottom:'1px solid #f8f0ea' }}>
+              <div style={{ width:8, height:8, borderRadius:'50%', background: k.balance > 0 ? '#6BCB77' : '#e0d0c8', flexShrink:0 }} />
+              <span style={{ flex:1, fontSize:14, fontWeight:700, color:'#333' }}>{k.name}</span>
+              <span style={{ fontSize:15, fontWeight:900, color:'#6BCB77' }}>${(k.balance||0).toFixed(2)}</span>
+            </div>
+          ))}
+        </Card>
+      )}
+
+      {/* Upcoming events */}
+      {(events||[]).filter(e => e.date >= new Date().toISOString().slice(0,10)).slice(0,3).length > 0 && (
+        <Card animate style={{ marginBottom:16, animationDelay:'.10s' }}>
+          <div style={{ display:'flex', alignItems:'center', marginBottom:12 }}>
+            <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, flex:1 }}>📅 Upcoming</div>
+            <button onClick={()=>setTab('calendar')} style={{ background:'none', border:'none', color:'#FF8C42', fontSize:12, fontWeight:700, cursor:'pointer', fontFamily:'inherit' }}>View all →</button>
+          </div>
+          {(events||[]).filter(e => e.date >= new Date().toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,3).map(e => (
+            <div key={e.id} style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 0', borderBottom:'1px solid #f8f0ea' }}>
+              <div style={{ width:40, flexShrink:0, textAlign:'center' }}>
+                <div style={{ fontSize:10, fontWeight:700, color:'#aaa', textTransform:'uppercase' }}>{new Date(e.date+'T12:00:00').toLocaleDateString([],{month:'short'})}</div>
+                <div style={{ fontSize:18, fontWeight:900, color:'#FF8C42' }}>{new Date(e.date+'T12:00:00').getDate()}</div>
+              </div>
+              <div style={{ flex:1 }}>
+                <div style={{ fontWeight:800, color:'#333', fontSize:14 }}>{e.title}</div>
+                {e.time && <div style={{ fontSize:11, color:'#aaa' }}>{e.time}</div>}
+              </div>
+              {e.color && <div style={{ width:10, height:10, borderRadius:'50%', background:e.color, flexShrink:0 }} />}
+            </div>
+          ))}
+        </Card>
+      )}
+
+      {/* Activity log */}
+      <Card animate style={{ animationDelay:'.12s' }}>
+        <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:12 }}>📋 Recent Activity</div>
+        <ActivityLog activity={activity} members={members} />
+      </Card>
+    </div>
+  );
+}
+
+
+function ChoreCard({ chore, me, members, onUpdate }) {
+  const isParent = me.role === 'parent';
+  const assignee = chore.assignedTo === 'anyone' ? null : members.find(m => m.id === chore.assignedTo);
+  const isMyChore = chore.assignedTo === 'anyone' || chore.assignedTo === me.id;
+  const statusColor = { pending:'#FFB347', completed:'#6BCB77', approved:'#4D96FF' }[chore.status] || '#ccc';
+  const statusLabel = { pending:'To Do', completed:'✓ Done – awaiting approval', approved:'✅ Approved!' }[chore.status];
+  return (
+    <Card animate style={{ marginBottom:10 }}>
+      <div style={{ display:'flex', alignItems:'flex-start', gap:10 }}>
+        <div style={{ flex:1 }}>
+          <div style={{ fontWeight:800, color:'#333', fontSize:15, marginBottom:4 }}>{chore.title}</div>
+          <div style={{ display:'flex', gap:6, flexWrap:'wrap', alignItems:'center' }}>
+            <span style={{ fontSize:12, color:'#aaa' }}>{assignee ? assignee.name : 'Anyone'}</span>
+            {chore.points > 0 && <Chip color="#FF8C42" label={`+$${parseFloat(chore.points).toFixed(2)}`} />}
+            <Chip color={statusColor} label={statusLabel} />
+          </div>
+        </div>
+        <div style={{ display:'flex', gap:6 }}>
+          {isMyChore && chore.status === 'pending' && (
+            <Btn onClick={()=>onUpdate({...chore,status:'completed'})} color="#6BCB77" style={{ padding:'8px 12px', fontSize:13 }}>Done!</Btn>
+          )}
+          {isParent && chore.status === 'completed' && (
+            <Btn onClick={()=>onUpdate({...chore,status:'approved'})} color="#4D96FF" style={{ padding:'8px 12px', fontSize:13 }}>Approve</Btn>
+          )}
+          {isParent && (
+            <Btn onClick={()=>onUpdate(null)} color="#FF4757" outline style={{ padding:'8px 10px', fontSize:13 }}>✕</Btn>
+          )}
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+function ChoresTab({ me, members, chores, saveChores, saveMembers, logActivity }) {
+  const isParent = me.role === 'parent';
+  const [title, setTitle]     = useState('');
+  const [assignTo, setAssignTo] = useState('anyone');
+  const [points, setPoints]   = useState(1);
+  const [customPoints, setCustomPoints] = useState('');
+
+  const addChore = () => {
+    if (!title.trim()) return;
+    const pts = customPoints !== '' ? (parseFloat(customPoints)||0) : points;
+    saveChores([...chores, { id:Date.now().toString(), title:title.trim(), assignedTo:assignTo, points:pts, status:'pending' }]);
+    setTitle(''); setCustomPoints('');
+  };
+
+  const updateChore = (chore, newChore) => {
+    if (!newChore) { saveChores(chores.filter(c => c.id !== chore.id)); return; }
+    if (newChore.status === 'completed' && chore.status === 'pending') {
+      const who = newChore.assignedTo !== 'anyone' ? members.find(m => m.id === newChore.assignedTo) : null;
+      if (logActivity) logActivity('chore_done', (who ? who.name : 'Someone') + ' completed "' + newChore.title + '"', '✅');
+    }
+    if (newChore.status === 'approved' && newChore.points > 0 && chore.status !== 'approved') {
+      const kid = newChore.assignedTo !== 'anyone' ? members.find(m => m.id === newChore.assignedTo) : null;
+      if (kid) {
+        saveMembers(members.map(m => m.id === kid.id ? {...m, balance:(m.balance||0)+newChore.points} : m));
+        if (logActivity) logActivity('chore_approved', kid.name + ' earned $' + parseFloat(newChore.points).toFixed(2) + ' for "' + newChore.title + '"', '💰');
+      }
+    }
+    saveChores(chores.map(c => c.id === newChore.id ? newChore : c));
+  };
+
+  const pending = chores.filter(c => c.status !== 'approved');
+  const done    = chores.filter(c => c.status === 'approved');
+
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+      <h2 style={{ margin:'0 0 16px', color:'#333', fontSize:22, fontWeight:900 }}>✅ Chores</h2>
+      {isParent && (
+        <Card style={{ marginBottom:16 }}>
+          <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:12 }}>+ Add Chore</div>
+          <Inp value={title} onChange={e=>setTitle(e.target.value)} placeholder="Chore name" style={{ marginBottom:10 }} />
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>ASSIGN TO</div>
+          <div style={{ display:'flex', gap:6, flexWrap:'wrap', marginBottom:10 }}>
+            <button onClick={()=>setAssignTo('anyone')} style={{ padding:'6px 12px', border:`2px solid ${assignTo==='anyone'?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:assignTo==='anyone'?'#fff5ee':'white', color:assignTo==='anyone'?'#FF8C42':'#aaa', fontWeight:700, cursor:'pointer', fontSize:13, fontFamily:'inherit' }}>Anyone</button>
+            {members.map(m => (
+              <button key={m.id} onClick={()=>setAssignTo(m.id)} style={{ padding:'6px 12px', border:`2px solid ${assignTo===m.id?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:assignTo===m.id?'#fff5ee':'white', color:assignTo===m.id?'#FF8C42':'#aaa', fontWeight:700, cursor:'pointer', fontSize:13, fontFamily:'inherit' }}>{m.name}</button>
+            ))}
+          </div>
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:8 }}>ALLOWANCE</div>
+          <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:12, flexWrap:'wrap' }}>
+            {[0,1,2,5,10].map(v => (
+              <button key={v} onClick={()=>{ setPoints(v); setCustomPoints(''); }} style={{ padding:'6px 12px', border:`2px solid ${points===v&&customPoints===''?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:points===v&&customPoints===''?'#fff5ee':'white', color:points===v&&customPoints===''?'#FF8C42':'#aaa', fontWeight:700, cursor:'pointer', fontSize:13, fontFamily:'inherit' }}>${v}</button>
+            ))}
+            <div style={{ display:'flex', alignItems:'center', border:`2px solid ${customPoints!==''?'#FF8C42':'#e8e0d8'}`, borderRadius:10, overflow:'hidden', background:customPoints!==''?'#fff5ee':'white' }}>
+              <span style={{ padding:'6px 4px 6px 10px', fontSize:13, fontWeight:700, color:'#aaa' }}>$</span>
+              <input type="number" min="0" step="0.25" value={customPoints} onChange={e=>{ setCustomPoints(e.target.value); if(e.target.value!=='') setPoints(parseFloat(e.target.value)||0); }} placeholder="custom" style={{ border:'none', outline:'none', width:70, padding:'6px 8px 6px 0', fontSize:13, fontWeight:700, color:'#FF8C42', background:'transparent', fontFamily:'inherit' }} />
+            </div>
+          </div>
+          <Btn onClick={addChore} style={{ width:'100%' }}>Add Chore</Btn>
+        </Card>
+      )}
+      {pending.length === 0 && <div style={{ textAlign:'center', color:'#bbb', fontSize:14, padding:20 }}>No chores yet! 🎉</div>}
+      {pending.map(c => <ChoreCard key={c.id} chore={c} me={me} members={members} onUpdate={nc=>updateChore(c,nc)} />)}
+      {done.length > 0 && (
+        <>
+          <div style={{ fontSize:12, fontWeight:700, color:'#bbb', textTransform:'uppercase', letterSpacing:1, margin:'16px 0 8px' }}>Completed</div>
+          {done.map(c => <ChoreCard key={c.id} chore={c} me={me} members={members} onUpdate={nc=>updateChore(c,nc)} />)}
+        </>
+      )}
+    </div>
+  );
+}
+
+// ── Allowance ────────────────────────────────────────────────────────────────
+
+function AllowanceTab({ me, members, saveMembers, messages, saveMessages, logActivity }) {
+  const isParent = me.role === 'parent';
+  const kids = members.filter(m => m.role === 'kid');
+  const [customAmt, setCustomAmt] = useState({});
+  const [confirmCashIn, setConfirmCashIn] = useState(null);
+
+  const adjust = (kid, delta) => {
+    saveMembers(members.map(m => m.id === kid.id ? {...m, balance:Math.max(0,(m.balance||0)+delta)} : m));
+  };
+
+  const applyCustom = (kid, sign) => {
+    const val = parseFloat(customAmt[kid.id] || 0);
+    if (!val || val <= 0) return;
+    adjust(kid, sign * val);
+    setCustomAmt({...customAmt, [kid.id]: ''});
+  };
+
+  const doCashIn = (kid) => {
+    const amt = (kid.balance || 0).toFixed(2);
+    saveMembers(members.map(m => m.id === kid.id ? {...m, balance:0} : m));
+    saveMessages([...(messages||[]), { id:Date.now().toString(), from:kid.id, name:kid.name, text:'💸 Cash out request! Please send $' + amt + ' to my Venmo. (Balance reset to $0)', at:Date.now() }]);
+    setConfirmCashIn(null);
+  };
+
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+      <h2 style={{ margin:'0 0 16px', color:'#333', fontSize:22, fontWeight:900 }}>💰 Allowance</h2>
+      {kids.length === 0 && <div style={{ textAlign:'center', color:'#bbb', fontSize:14, padding:20 }}>No kids added yet!</div>}
+      {kids.map(k => (
+        <Card key={k.id} style={{ marginBottom:12 }}>
+          {confirmCashIn === k.id ? (
+            <div>
+              <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:12 }}>
+                <Avatar m={k} size={44} />
+                <div style={{ flex:1 }}>
+                  <div style={{ fontWeight:900, color:'#333', fontSize:16 }}>{k.name}</div>
+                  <div style={{ fontWeight:900, color:'#6BCB77', fontSize:22 }}>${(k.balance||0).toFixed(2)}</div>
+                </div>
+              </div>
+              <div style={{ background:'#fff8f3', borderRadius:12, padding:'12px 14px', marginBottom:12 }}>
+                <div style={{ fontWeight:800, color:'#FF8C42', fontSize:14, marginBottom:4 }}>💸 Cash Out ${(k.balance||0).toFixed(2)}?</div>
+                <div style={{ fontSize:13, color:'#888' }}>A parent will be notified in chat to send the money to your Venmo. Your balance will reset to $0.</div>
+              </div>
+              <div style={{ display:'flex', gap:8 }}>
+                <Btn onClick={()=>doCashIn(k)} color="#6BCB77" style={{ flex:1 }}>Yes, Cash Out!</Btn>
+                <Btn onClick={()=>setConfirmCashIn(null)} color="#bbb" outline style={{ flex:1 }}>Cancel</Btn>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:(isParent||(k.balance||0)>0)?12:0 }}>
+                <Avatar m={k} size={44} />
+                <div style={{ flex:1 }}>
+                  <div style={{ fontWeight:900, color:'#333', fontSize:16 }}>{k.name}</div>
+                  <div style={{ fontWeight:900, color:'#6BCB77', fontSize:22 }}>${(k.balance||0).toFixed(2)}</div>
+                </div>
+                {(me.id === k.id || isParent) && (k.balance||0) > 0 && (
+                  <button onClick={()=>setConfirmCashIn(k.id)} style={{ background:'linear-gradient(135deg,#6BCB77,#4D96FF)', border:'none', color:'white', fontWeight:900, fontSize:13, padding:'8px 14px', borderRadius:10, cursor:'pointer', fontFamily:'inherit' }}>
+                    💸 Cash In
+                  </button>
+                )}
+              </div>
+              {isParent && (
+                <>
+                  <div style={{ display:'flex', gap:8, marginBottom:8 }}>
+                    <Btn onClick={()=>adjust(k,1)} color="#6BCB77" style={{ flex:1 }}>+$1</Btn>
+                    <Btn onClick={()=>adjust(k,5)} color="#6BCB77" style={{ flex:1 }}>+$5</Btn>
+                    <Btn onClick={()=>adjust(k,-1)} color="#FF4757" outline style={{ flex:1 }}>-$1</Btn>
+                    <Btn onClick={()=>adjust(k,-5)} color="#FF4757" outline style={{ flex:1 }}>-$5</Btn>
+                  </div>
+                  <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+                    <div style={{ display:'flex', alignItems:'center', border:'2px solid #e8e0d8', borderRadius:10, overflow:'hidden', background:'white', flex:1 }}>
+                      <span style={{ padding:'8px 4px 8px 10px', fontSize:13, fontWeight:700, color:'#aaa' }}>$</span>
+                      <input type="number" min="0" step="0.25" value={customAmt[k.id]||''} onChange={e=>setCustomAmt({...customAmt,[k.id]:e.target.value})} placeholder="custom" style={{ border:'none', outline:'none', flex:1, padding:'8px 8px 8px 2px', fontSize:13, fontWeight:700, color:'#333', background:'transparent', fontFamily:'inherit' }} />
+                    </div>
+                    <Btn onClick={()=>applyCustom(k,1)} color="#6BCB77" style={{ padding:'10px 16px' }}>+</Btn>
+                    <Btn onClick={()=>applyCustom(k,-1)} color="#FF4757" outline style={{ padding:'10px 16px' }}>−</Btn>
+                  </div>
+                </>
+              )}
+            </>
+          )}
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+// ── Shopping ─────────────────────────────────────────────────────────────────
+
+function ShoppingTab({ me, shopping, saveShopping }) {
+  const [item, setItem] = useState('');
+  const add = () => { if (!item.trim()) return; saveShopping([...shopping, { id:Date.now().toString(), text:item.trim(), done:false }]); setItem(''); };
+  const toggle = id => saveShopping(shopping.map(i => i.id===id ? {...i,done:!i.done} : i));
+  const clear = () => saveShopping(shopping.filter(i => !i.done));
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+      <div style={{ display:'flex', alignItems:'center', marginBottom:16 }}>
+        <h2 style={{ flex:1, color:'#333', fontSize:22, fontWeight:900 }}>🛒 Shopping</h2>
+        {shopping.some(i=>i.done) && <button onClick={clear} style={{ background:'none', border:'none', color:'#FF4757', fontWeight:700, fontSize:13, cursor:'pointer', fontFamily:'inherit' }}>Clear done</button>}
+      </div>
+      <div style={{ display:'flex', gap:8, marginBottom:16 }}>
+        <Inp value={item} onChange={e=>setItem(e.target.value)} onKeyDown={e=>e.key==='Enter'&&add()} placeholder="Add item…" style={{ flex:1 }} />
+        <Btn onClick={add}>Add</Btn>
+      </div>
+      {shopping.length === 0 && <div style={{ textAlign:'center', color:'#bbb', fontSize:14, padding:20 }}>List is empty!</div>}
+      {shopping.map(i => (
+        <div key={i.id} onClick={()=>toggle(i.id)} style={{ display:'flex', alignItems:'center', gap:12, padding:'12px 0', borderBottom:'1px solid #f8f0ea', cursor:'pointer' }}>
+          <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${i.done?'#6BCB77':'#e0d0c8'}`, background:i.done?'#6BCB77':'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            {i.done && <span style={{ color:'white', fontSize:14 }}>✓</span>}
+          </div>
+          <span style={{ fontSize:15, color:i.done?'#bbb':'#333', textDecoration:i.done?'line-through':'none', fontWeight:i.done?400:600 }}>{i.text}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Chat ──────────────────────────────────────────────────────────────────────
+
+function ChatTab({ me, members, messages, saveMessages }) {
+  const [text, setText] = useState('');
+  const bottomRef = useRef(null);
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior:'smooth' });
+    try { sessionStorage.setItem('chat-seen-'+me.id, Date.now().toString()); } catch(e) {}
+  }, [messages]);
+  const send = () => {
+    if (!text.trim()) return;
+    saveMessages([...messages, { id:Date.now().toString(), from:me.id, name:me.name, text:text.trim(), at:Date.now() }]);
+    setText('');
+  };
+  return (
+    <div style={{ display:'flex', flexDirection:'column', height:'calc(100vh - 120px)' }}>
+      <div style={{ padding:'12px 16px 8px', flexShrink:0 }}>
+        <h2 style={{ color:'#333', fontSize:22, fontWeight:900 }}>💬 Family Chat</h2>
+      </div>
+      <div style={{ flex:1, overflowY:'auto', padding:'0 16px' }}>
+        {messages.length === 0 && <div style={{ textAlign:'center', color:'#bbb', fontSize:14, padding:20 }}>No messages yet! Say hi 👋</div>}
+        {messages.map(msg => {
+          const isMe = msg.from === me.id;
+          const sender = members.find(m => m.id === msg.from);
+          return (
+            <div key={msg.id} style={{ display:'flex', flexDirection:isMe?'row-reverse':'row', gap:8, marginBottom:10, alignItems:'flex-end' }}>
+              {!isMe && <Avatar m={sender||{avatar:'?',color:'#ccc'}} size={30} />}
+              <div style={{ maxWidth:'72%' }}>
+                {!isMe && <div style={{ fontSize:11, color:'#aaa', fontWeight:700, marginBottom:2, paddingLeft:4 }}>{msg.name}</div>}
+                <div style={{ padding:'9px 14px', borderRadius:isMe?'18px 18px 4px 18px':'18px 18px 18px 4px', background:isMe?'linear-gradient(135deg,#FF8C42,#FF6FC8)':'white', color:isMe?'white':'#333', fontSize:15, fontWeight:600, boxShadow:'0 2px 8px rgba(0,0,0,.08)' }}>
+                  {msg.text}
+                </div>
+                <div style={{ fontSize:10, color:'#ccc', textAlign:isMe?'right':'left', marginTop:2, paddingLeft:4 }}>
+                  {new Date(msg.at).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        <div ref={bottomRef} />
+      </div>
+      <div style={{ padding:'8px 16px 16px', display:'flex', gap:8, flexShrink:0 }}>
+        <Inp value={text} onChange={e=>setText(e.target.value)} onKeyDown={e=>e.key==='Enter'&&send()} placeholder="Message…" style={{ flex:1 }} />
+        <button onClick={send} style={{ width:44, height:44, borderRadius:'50%', background:'linear-gradient(135deg,#FF8C42,#FF6FC8)', border:'none', color:'white', cursor:'pointer', fontSize:20 }}>➤</button>
+      </div>
+    </div>
+  );
+}
+
+// ── Dinner ────────────────────────────────────────────────────────────────────
+
+// ── Calendar ──────────────────────────────────────────────────────────────────
+
+function CalendarTab({ me, members, events, saveEvents, saveMessages, messages, logActivity }) {
+  const today = new Date();
+  const [viewYear,  setViewYear]  = useState(today.getFullYear());
+  const [viewMonth, setViewMonth] = useState(today.getMonth());
+  const [selected,  setSelected]  = useState(null);
+  const [showForm,  setShowForm]  = useState(false);
+  const [showDay,   setShowDay]   = useState(false);
+
+  // Form state
+  const [title,     setTitle]     = useState('');
+  const [evtTime,   setEvtTime]   = useState('');
+  const [evtNote,   setEvtNote]   = useState('');
+  const [evtColor,  setEvtColor]  = useState('#FF8C42');
+  const [invitees,  setInvitees]  = useState([]);
+
+  const EVT_COLORS = ['#FF8C42','#FF6FC8','#4D96FF','#6BCB77','#C77DFF','#FFB347','#FF6B6B','#00C9A7'];
+
+  const daysInMonth = new Date(viewYear, viewMonth+1, 0).getDate();
+  const firstDay    = new Date(viewYear, viewMonth, 1).getDay();
+  const monthName   = new Date(viewYear, viewMonth, 1).toLocaleDateString([], { month:'long', year:'numeric' });
+
+  const dateStr = (d) => {
+    return viewYear + '-' + String(viewMonth+1).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+  };
+
+  const eventsOn = (d) => (events||[]).filter(e => e.date === dateStr(d));
+
+  const openDay = (d) => {
+    setSelected(d);
+    const ds = dateStr(d);
+    const todayStr = today.toISOString().slice(0,10);
+    if (ds >= todayStr) { setShowForm(true); setShowDay(false); }
+    else { setShowDay(true); setShowForm(false); }
+    setTitle(''); setEvtTime(''); setEvtNote(''); setEvtColor('#FF8C42'); setInvitees([]);
+  };
+
+  const openExisting = (d) => {
+    setSelected(d); setShowDay(true); setShowForm(false);
+  };
+
+  const addEvent = () => {
+    if (!title.trim() || !selected) return;
+    const evt = {
+      id: Date.now().toString(),
+      date: dateStr(selected),
+      title: title.trim(),
+      time: evtTime,
+      note: evtNote.trim(),
+      color: evtColor,
+      createdBy: me.id,
+      createdByName: me.name,
+      invitees: invitees
+    };
+    const updated = [...(events||[]), evt];
+    saveEvents(updated);
+    if (logActivity) logActivity('event_added', me.name + ' added "' + evt.title + '" on ' + new Date(evt.date+'T12:00:00').toLocaleDateString([],{month:'short',day:'numeric'}), '📅');
+    // Notify invitees in chat
+    if (invitees.length > 0) {
+      const names = invitees.map(id => { var m = members.find(x => x.id===id); return m ? m.name : ''; }).filter(Boolean).join(', ');
+      saveMessages([...(messages||[]), {
+        id: Date.now().toString()+'-cal',
+        from: me.id, name: me.name,
+        text: '📅 ' + me.name + ' invited ' + names + ' to "' + evt.title + '" on ' + new Date(evt.date+'T12:00:00').toLocaleDateString([],{weekday:'short',month:'short',day:'numeric'}) + (evtTime ? ' at ' + evtTime : ''),
+        at: Date.now()
+      }]);
+    }
+    setShowForm(false); setTitle(''); setEvtTime(''); setEvtNote(''); setInvitees([]);
+  };
+
+  const deleteEvent = (id) => {
+    saveEvents((events||[]).filter(e => e.id !== id));
+  };
+
+  const toggleInvitee = (id) => {
+    setInvitees(invitees.includes(id) ? invitees.filter(x=>x!==id) : [...invitees, id]);
+  };
+
+  const dayEvents = selected ? eventsOn(selected) : [];
+  const todayStr2 = today.toISOString().slice(0,10);
+  const upcomingAll = (events||[]).filter(e => e.date >= todayStr2).sort((a,b)=>a.date.localeCompare(b.date));
+
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+      <h2 style={{ margin:'0 0 16px', color:'#333', fontSize:22, fontWeight:900 }}>📅 Calendar</h2>
+
+      {/* Month nav */}
+      <Card style={{ marginBottom:16 }}>
+        <div style={{ display:'flex', alignItems:'center', marginBottom:16 }}>
+          <button onClick={()=>{ if(viewMonth===0){setViewMonth(11);setViewYear(viewYear-1);}else{setViewMonth(viewMonth-1);} }} style={{ background:'none', border:'none', fontSize:20, cursor:'pointer', color:'#FF8C42', padding:'0 8px' }}>‹</button>
+          <div style={{ flex:1, textAlign:'center', fontWeight:900, color:'#333', fontSize:16 }}>{monthName}</div>
+          <button onClick={()=>{ if(viewMonth===11){setViewMonth(0);setViewYear(viewYear+1);}else{setViewMonth(viewMonth+1);} }} style={{ background:'none', border:'none', fontSize:20, cursor:'pointer', color:'#FF8C42', padding:'0 8px' }}>›</button>
+        </div>
+
+        {/* Day headers */}
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(7,1fr)', marginBottom:4 }}>
+          {['Su','Mo','Tu','We','Th','Fr','Sa'].map(d => (
+            <div key={d} style={{ textAlign:'center', fontSize:11, fontWeight:700, color:'#bbb', padding:'4px 0' }}>{d}</div>
+          ))}
+        </div>
+
+        {/* Calendar grid */}
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(7,1fr)', gap:2 }}>
+          {Array.from({length: firstDay}).map((_,i) => <div key={'empty'+i} />)}
+          {Array.from({length: daysInMonth}).map((_,i) => {
+            const d = i+1;
+            const ds = dateStr(d);
+            const isToday = ds === today.toISOString().slice(0,10);
+            const isSelected = selected === d;
+            const evts = eventsOn(d);
+            const isPast = ds < today.toISOString().slice(0,10);
+            return (
+              <button key={d} onClick={()=>openDay(d)} style={{ aspectRatio:'1', border:'none', borderRadius:10, background: isSelected?'#FF8C42': isToday?'#fff5ee':'transparent', cursor:'pointer', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:2, position:'relative', opacity:isPast?.5:1 }}>
+                <span style={{ fontSize:13, fontWeight:isToday||isSelected?900:600, color:isSelected?'white':isToday?'#FF8C42':'#333' }}>{d}</span>
+                {evts.length > 0 && (
+                  <div style={{ display:'flex', gap:2, marginTop:1 }}>
+                    {evts.slice(0,3).map((e,ei) => <div key={ei} style={{ width:5, height:5, borderRadius:'50%', background:isSelected?'rgba(255,255,255,.8)':e.color||'#FF8C42' }} />)}
+                  </div>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      </Card>
+
+      {/* Add event form */}
+      {showForm && selected && (
+        <Card animate style={{ marginBottom:16 }}>
+          <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:14 }}>
+            + Add Event — {new Date(dateStr(selected)+'T12:00:00').toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'})}
+          </div>
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>TITLE</div>
+          <Inp value={title} onChange={e=>setTitle(e.target.value)} placeholder="What's happening?" style={{ marginBottom:12 }} autoFocus />
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>TIME (optional)</div>
+          <input type="time" value={evtTime} onChange={e=>setEvtTime(e.target.value)} style={{ border:'2px solid #f0e4d8', borderRadius:12, padding:'10px 14px', fontSize:15, outline:'none', background:'#fffaf6', width:'100%', marginBottom:12, fontFamily:'inherit' }} />
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>NOTE (optional)</div>
+          <Inp value={evtNote} onChange={e=>setEvtNote(e.target.value)} placeholder="Any details…" style={{ marginBottom:12 }} />
+          <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:8 }}>COLOR</div>
+          <div style={{ display:'flex', gap:8, marginBottom:14, flexWrap:'wrap' }}>
+            {EVT_COLORS.map(c => (
+              <button key={c} onClick={()=>setEvtColor(c)} style={{ width:28, height:28, borderRadius:'50%', background:c, border:evtColor===c?'3px solid #333':'3px solid transparent', cursor:'pointer' }} />
+            ))}
+          </div>
+          {members.filter(m=>m.id!==me.id).length > 0 && (
+            <>
+              <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:8 }}>INVITE FAMILY MEMBERS</div>
+              <div style={{ display:'flex', flexWrap:'wrap', gap:8, marginBottom:14 }}>
+                {members.filter(m=>m.id!==me.id).map(m => (
+                  <button key={m.id} onClick={()=>toggleInvitee(m.id)} style={{ display:'flex', alignItems:'center', gap:6, padding:'6px 12px', border:`2px solid ${invitees.includes(m.id)?m.color:'#e8e0d8'}`, borderRadius:20, background:invitees.includes(m.id)?m.color+'18':'white', cursor:'pointer', fontFamily:'inherit' }}>
+                    <Avatar m={m} size={22} />
+                    <span style={{ fontSize:13, fontWeight:700, color:invitees.includes(m.id)?m.color:'#aaa' }}>{m.name}</span>
+                    {invitees.includes(m.id) && <span style={{ fontSize:12, color:m.color }}>✓</span>}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+          <div style={{ display:'flex', gap:8 }}>
+            <Btn onClick={addEvent} color="#FF8C42" style={{ flex:2 }}>Add Event</Btn>
+            <Btn onClick={()=>setShowForm(false)} color="#bbb" outline style={{ flex:1 }}>Cancel</Btn>
+          </div>
+        </Card>
+      )}
+
+      {/* Day detail view (past days / existing events) */}
+      {showDay && selected && dayEvents.length > 0 && (
+        <Card animate style={{ marginBottom:16 }}>
+          <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:14 }}>
+            {new Date(dateStr(selected)+'T12:00:00').toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'})}
+          </div>
+          {dayEvents.map(e => (
+            <div key={e.id} style={{ display:'flex', gap:12, padding:'10px 0', borderBottom:'1px solid #f8f0ea', alignItems:'flex-start' }}>
+              <div style={{ width:4, borderRadius:2, background:e.color||'#FF8C42', alignSelf:'stretch', flexShrink:0 }} />
+              <div style={{ flex:1 }}>
+                <div style={{ fontWeight:800, color:'#333', fontSize:15 }}>{e.title}</div>
+                {e.time && <div style={{ fontSize:12, color:'#aaa', marginTop:2 }}>🕐 {e.time}</div>}
+                {e.note && <div style={{ fontSize:13, color:'#666', marginTop:4 }}>{e.note}</div>}
+                {e.invitees && e.invitees.length > 0 && (
+                  <div style={{ display:'flex', gap:4, marginTop:6, flexWrap:'wrap' }}>
+                    {e.invitees.map(id => { var m = members.find(x=>x.id===id); return m ? <Avatar key={id} m={m} size={22} /> : null; })}
+                  </div>
+                )}
+                <div style={{ fontSize:11, color:'#ccc', marginTop:4 }}>Added by {e.createdByName}</div>
+              </div>
+              {(me.id === e.createdBy || me.role === 'parent') && (
+                <button onClick={()=>deleteEvent(e.id)} style={{ background:'none', border:'none', color:'#FF4757', fontSize:16, cursor:'pointer', padding:4 }}>🗑</button>
+              )}
+            </div>
+          ))}
+          <button onClick={()=>{ setShowDay(false); setShowForm(true); }} style={{ width:'100%', marginTop:12, padding:'9px 0', border:'2px dashed #FFB347', borderRadius:10, background:'#fffaf6', color:'#FF8C42', fontWeight:800, fontSize:13, cursor:'pointer', fontFamily:'inherit' }}>+ Add another event this day</button>
+        </Card>
+      )}
+
+      {/* Upcoming events list */}
+      {upcomingAll.length > 0 && (
+        <Card>
+          <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:14 }}>Upcoming Events</div>
+          {upcomingAll.slice(0,10).map(e => (
+            <div key={e.id} style={{ display:'flex', gap:12, padding:'10px 0', borderBottom:'1px solid #f8f0ea', alignItems:'center' }}>
+              <div style={{ width:44, textAlign:'center', flexShrink:0 }}>
+                <div style={{ fontSize:10, fontWeight:700, color:'#aaa', textTransform:'uppercase' }}>{new Date(e.date+'T12:00:00').toLocaleDateString([],{month:'short'})}</div>
+                <div style={{ fontSize:20, fontWeight:900, color:e.color||'#FF8C42' }}>{new Date(e.date+'T12:00:00').getDate()}</div>
+              </div>
+              <div style={{ width:4, borderRadius:2, background:e.color||'#FF8C42', alignSelf:'stretch', flexShrink:0 }} />
+              <div style={{ flex:1 }}>
+                <div style={{ fontWeight:800, color:'#333', fontSize:14 }}>{e.title}</div>
+                {e.time && <div style={{ fontSize:11, color:'#aaa' }}>{e.time}</div>}
+              </div>
+              {(me.id === e.createdBy || me.role === 'parent') && (
+                <button onClick={()=>deleteEvent(e.id)} style={{ background:'none', border:'none', color:'#FF4757', fontSize:14, cursor:'pointer', padding:4 }}>🗑</button>
+              )}
+            </div>
+          ))}
+        </Card>
+      )}
+
+      {upcomingAll.length === 0 && !showForm && (
+        <div style={{ textAlign:'center', color:'#bbb', fontSize:14, padding:24 }}>
+          <div style={{ fontSize:48, marginBottom:8 }}>📅</div>
+          Tap a date to add a family event!
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+function DinnerTab({ me, dinner, suggestions, saveDinner, saveSuggestions }) {
+  const isParent = me.role === 'parent';
+  const [suggestion, setSuggestion] = useState('');
+  const [editing, setEditing] = useState(null);
+  const [editVal, setEditVal] = useState('');
+  const today = new Date();
+  const sow = new Date(today); sow.setDate(today.getDate() - today.getDay());
+  const days = DAYS.map((d,i) => {
+    const date = new Date(sow); date.setDate(sow.getDate()+i);
+    return { name:d, key:`${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`, isToday:date.toDateString()===today.toDateString() };
+  });
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+      <h2 style={{ margin:'0 0 16px', color:'#333', fontSize:22, fontWeight:900 }}>🍽 Dinner</h2>
+      <Card style={{ marginBottom:16 }}>
+        <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:12 }}>This Week</div>
+        {days.map(d => (
+          <div key={d.key} style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 0', borderBottom:'1px solid #f8f0ea' }}>
+            <div style={{ width:72, flexShrink:0, fontWeight:800, fontSize:13, color:d.isToday?'#FF8C42':'#555' }}>{d.name.slice(0,3)}</div>
+            {editing===d.key ? (
+              <div style={{ flex:1, display:'flex', gap:6 }}>
+                <Inp value={editVal} onChange={e=>setEditVal(e.target.value)} placeholder="What's for dinner?" style={{ flex:1, padding:'6px 10px' }} autoFocus />
+                <Btn onClick={()=>{ saveDinner({...dinner,[d.key]:editVal}); setEditing(null); }} color="#6BCB77" style={{ padding:'6px 10px', fontSize:13 }}>✓</Btn>
+                <Btn onClick={()=>setEditing(null)} color="#bbb" outline style={{ padding:'6px 10px', fontSize:13 }}>✕</Btn>
+              </div>
+            ) : (
+              <div style={{ flex:1, display:'flex', alignItems:'center', gap:8 }}>
+                <span style={{ fontSize:14, color:dinner[d.key]?'#333':'#ccc', flex:1 }}>{dinner[d.key] || '—'}</span>
+                {isParent && <button onClick={()=>{ setEditing(d.key); setEditVal(dinner[d.key]||''); }} style={{ background:'none', border:'none', fontSize:16, cursor:'pointer', color:'#FFB347' }}>✏️</button>}
+              </div>
+            )}
+          </div>
+        ))}
+      </Card>
+      <Card>
+        <div style={{ fontWeight:900, color:'#FF8C42', fontSize:15, marginBottom:12 }}>💡 Meal Ideas</div>
+        <div style={{ display:'flex', gap:8, marginBottom:12 }}>
+          <Inp value={suggestion} onChange={e=>setSuggestion(e.target.value)} placeholder="Suggest a meal…" style={{ flex:1 }} />
+          <Btn onClick={()=>{ if(suggestion.trim()){ saveSuggestions([...suggestions,{id:Date.now().toString(),text:suggestion.trim(),by:me.name}]); setSuggestion(''); } }}>Add</Btn>
+        </div>
+        {suggestions.map(s => (
+          <div key={s.id} style={{ display:'flex', alignItems:'center', gap:8, padding:'8px 0', borderBottom:'1px solid #f8f0ea' }}>
+            <span style={{ flex:1, fontSize:14, color:'#333' }}>{s.text}</span>
+            <span style={{ fontSize:11, color:'#bbb' }}>by {s.by}</span>
+            {(me.role==='parent'||s.by===me.name) && <button onClick={()=>saveSuggestions(suggestions.filter(x=>x.id!==s.id))} style={{ background:'none', border:'none', color:'#FF4757', fontSize:14, cursor:'pointer' }}>✕</button>}
+          </div>
+        ))}
+        {suggestions.length===0 && <div style={{ color:'#ccc', fontSize:13, textAlign:'center', padding:8 }}>No suggestions yet!</div>}
+      </Card>
+    </div>
+  );
+}
+
+// ── Account ───────────────────────────────────────────────────────────────────
+
+function compressPhoto(file, maxSize=120) {
+  return new Promise(resolve => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const scale = Math.min(maxSize/img.width, maxSize/img.height, 1);
+        canvas.width = Math.round(img.width*scale); canvas.height = Math.round(img.height*scale);
+        canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+        resolve(canvas.toDataURL('image/jpeg',.75));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function PhotoPicker({ photo, setPhoto, colorIdx, avatar }) {
+  const [uploading, setUploading] = useState(false);
+  const upload = async (e) => {
+    const file = e.target.files[0]; if (!file) return;
+    setUploading(true);
+    setPhoto(await compressPhoto(file, 120));
+    setUploading(false);
+  };
+  return (
+    <div style={{ display:'flex', flexDirection:'column', alignItems:'center', marginBottom:16 }}>
+      <div style={{ position:'relative', marginBottom:8 }}>
+        <Avatar m={{ photo, avatar, color:PALETTE[colorIdx] }} size={80} />
+        <label style={{ position:'absolute', bottom:0, right:0, width:28, height:28, borderRadius:'50%', background:'#FF8C42', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', boxShadow:'0 2px 6px rgba(0,0,0,.2)' }}>
+          <span style={{ color:'white', fontSize:14 }}>📷</span>
+          <input type="file" accept="image/*" onChange={upload} style={{ display:'none' }} />
+        </label>
+      </div>
+      {uploading && <div style={{ fontSize:12, color:'#aaa' }}>Processing…</div>}
+      {photo && !uploading && <button onClick={()=>setPhoto(null)} style={{ background:'none', border:'none', color:'#FF4757', fontSize:12, fontWeight:700, cursor:'pointer', fontFamily:'inherit' }}>✕ Remove photo</button>}
+    </div>
+  );
+}
+
+function NotificationBtn({ me }) {
+  const [status, setStatus] = useState('check');
+  useEffect(() => {
+    try {
+      if (!('Notification' in window) || !messaging) { setStatus('unsupported'); return; }
+      setStatus(Notification.permission);
+    } catch(e) { setStatus('unsupported'); }
+  }, []);
+  const enable = async () => {
+    if (status === 'denied') { alert('Notifications are blocked. Tap the lock icon → Notifications → Allow'); return; }
+    try { const ok = await enableNotifications(me.id); setStatus(ok ? 'granted' : (Notification.permission||'default')); } catch(e) {}
+  };
+  if (status === 'check' || status === 'unsupported') return null;
+  if (status === 'granted') return <div style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 14px', background:'#f0fdf4', borderRadius:12, border:'1.5px solid #6BCB77', marginTop:8 }}><span>🔔</span><div style={{ flex:1, fontWeight:800, color:'#6BCB77', fontSize:13 }}>Notifications on!</div><span>✅</span></div>;
+  return <button onClick={enable} style={{ width:'100%', padding:'11px 0', border:'2px solid #FF8C42', borderRadius:12, background:'#fff8f3', color:'#FF8C42', fontWeight:800, fontSize:14, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:8, fontFamily:'inherit', marginTop:8 }}>🔔 Enable Chat Notifications</button>;
+}
+
+function InstallBtn() {
+  const [state, setState] = useState('check');
+  useEffect(() => {
+    try {
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) { setState('installed'); return; }
+      if (/iphone|ipad|ipod/i.test(navigator.userAgent)) { setState('ios'); return; }
+      if (window.__installPrompt) { setState('installable'); return; }
+      window.addEventListener('pwa-installable', () => setState('installable'));
+    } catch(e) {}
+  }, []);
+  if (state === 'check') return null;
+  if (state === 'installed') return <div style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 14px', background:'#f0fdf4', borderRadius:12, border:'1.5px solid #6BCB77', marginTop:8 }}><span>📱</span><div style={{ flex:1, fontWeight:800, color:'#6BCB77', fontSize:13 }}>App installed!</div><span>✅</span></div>;
+  if (state === 'ios') return <div style={{ padding:'12px 14px', background:'#f0f7ff', borderRadius:12, border:'1.5px solid #4D96FF', marginTop:8 }}><div style={{ fontWeight:800, color:'#4D96FF', fontSize:13, marginBottom:4 }}>📲 Add to Home Screen</div><div style={{ fontSize:12, color:'#666', lineHeight:1.5 }}>In Safari: tap <strong>Share (□↑)</strong> → <strong>"Add to Home Screen"</strong></div></div>;
+  if (state === 'installable') return <button onClick={async()=>{ if(window.__installPrompt){ window.__installPrompt.prompt(); await window.__installPrompt.userChoice; setState('installed'); } }} style={{ width:'100%', padding:'11px 0', border:'2px solid #4D96FF', borderRadius:12, background:'#f0f7ff', color:'#4D96FF', fontWeight:800, fontSize:14, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:8, fontFamily:'inherit', marginTop:8 }}>📲 Install as App</button>;
+  return null;
+}
+
+function AddMemberCard({ members, saveMembers }) {
+  const [open, setOpen]     = useState(false);
+  const [name, setName]     = useState('');
+  const [role, setRole]     = useState('kid');
+  const [avatarIdx, setAvatarIdx] = useState(0);
+  const [colorIdx, setColorIdx]   = useState(0);
+
+  const add = () => {
+    if (!name.trim()) return;
+    saveMembers([...members, { id:Date.now().toString(), name:name.trim(), role, avatar:AVATARS[avatarIdx], color:PALETTE[colorIdx], photo:null, balance:0 }]);
+    setName(''); setRole('kid'); setOpen(false);
+  };
+
+  if (!open) return (
+    <Card style={{ marginBottom:14 }}>
+      <button onClick={()=>setOpen(true)} style={{ width:'100%', padding:'12px 0', border:'2px dashed #FFB347', borderRadius:12, background:'#fffaf6', color:'#FF8C42', fontWeight:800, fontSize:15, cursor:'pointer', fontFamily:'inherit' }}>+ Add Family Member</button>
+    </Card>
+  );
+
+  return (
+    <Card style={{ marginBottom:14 }}>
+      <div style={{ fontWeight:900, fontSize:15, color:'#FF8C42', marginBottom:14 }}>➕ Add Member</div>
+      <Inp value={name} onChange={e=>setName(e.target.value)} placeholder="Name" style={{ marginBottom:12 }} autoFocus />
+      <div style={{ display:'flex', gap:8, marginBottom:14 }}>
+        {['parent','kid'].map(r => (
+          <button key={r} onClick={()=>setRole(r)} style={{ flex:1, padding:'9px 0', border:`2px solid ${role===r?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:role===r?'#fff5ee':'white', color:role===r?'#FF8C42':'#aaa', fontWeight:800, cursor:'pointer', fontSize:13, fontFamily:'inherit' }}>{r==='parent'?'👨‍👩 Parent':'🧒 Kid'}</button>
+        ))}
+      </div>
+      <AvatarPicker avatarIdx={avatarIdx} setAvatarIdx={setAvatarIdx} colorIdx={colorIdx} setColorIdx={setColorIdx} compact />
+      <div style={{ display:'flex', gap:8 }}>
+        <Btn onClick={add} color="#6BCB77" style={{ flex:1 }}>✓ Add</Btn>
+        <Btn onClick={()=>setOpen(false)} color="#bbb" outline style={{ flex:1 }}>Cancel</Btn>
+      </div>
+    </Card>
+  );
+}
+
+function AccountTab({ me, members, saveMembers, familyName, saveFamilyName, inviteCode, onSignOut }) {
+  const isParent = me.role === 'parent';
+  const [myName,     setMyName]     = useState(me.name);
+  const [myAvatar,   setMyAvatar]   = useState(me.avatar);
+  const [myColorIdx, setMyColorIdx] = useState(Math.max(0, PALETTE.indexOf(me.color)));
+  const [myPhoto,    setMyPhoto]    = useState(me.photo || null);
+  const [mySaved,    setMySaved]    = useState(false);
+  const [newFname,   setNewFname]   = useState(familyName);
+  const [fSaved,     setFSaved]     = useState(false);
+  const [editing,    setEditing]    = useState(null);
+  const [eName,      setEName]      = useState('');
+  const [eAvatar,    setEAvatar]    = useState('');
+  const [eColorIdx,  setEColorIdx]  = useState(0);
+  const [ePhoto,     setEPhoto]     = useState(null);
+  const [confirmDel, setConfirmDel] = useState(null);
+  const [copied,     setCopied]     = useState(false);
+
+  const saveMe = () => {
+    if (!myName.trim()) return;
+    saveMembers(members.map(m => m.id===me.id ? {...m, name:myName.trim(), avatar:myAvatar, color:PALETTE[myColorIdx], photo:myPhoto||null} : m));
+    setMySaved(true); setTimeout(()=>setMySaved(false), 2500);
+  };
+
+  const copyCode = () => {
+    try { navigator.clipboard.writeText(inviteCode); } catch(e) {}
+    setCopied(true); setTimeout(()=>setCopied(false), 2000);
+  };
+
+  const openEdit = (m) => { setEditing(m.id); setEName(m.name); setEAvatar(m.avatar); setEColorIdx(Math.max(0,PALETTE.indexOf(m.color))); setEPhoto(m.photo||null); };
+  const saveEdit = () => {
+    if (!eName.trim()) return;
+    saveMembers(members.map(m => m.id===editing ? {...m, name:eName.trim(), avatar:eAvatar, color:PALETTE[eColorIdx], photo:ePhoto||null} : m));
+    setEditing(null);
+  };
+  const doDelete = (id) => { saveMembers(members.filter(m => m.id!==id)); setConfirmDel(null); setEditing(null); };
+
+  const others = members.filter(m => m.id !== me.id);
+
+  return (
+    <div style={{ padding:16, paddingBottom:40 }}>
+      <h2 style={{ margin:'0 0 16px', color:'#333', fontSize:22, fontWeight:900 }}>👤 Account</h2>
+
+      <Card style={{ marginBottom:14 }}>
+        <div style={{ fontWeight:900, fontSize:15, color:'#FF8C42', marginBottom:14 }}>✏️ My Profile</div>
+        <PhotoPicker photo={myPhoto} setPhoto={setMyPhoto} colorIdx={myColorIdx} avatar={myAvatar} />
+        <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:6 }}>NAME</div>
+        <Inp value={myName} onChange={e=>setMyName(e.target.value)} placeholder="Your name" style={{ marginBottom:14 }} />
+        <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:8 }}>AVATAR</div>
+        <div style={{ display:'flex', flexWrap:'wrap', gap:6, marginBottom:14 }}>
+          {AVATARS.map(a => (
+            <button key={a} onClick={()=>setMyAvatar(a)} style={{ width:40, height:40, border:`2px solid ${myAvatar===a?'#FF8C42':'#e8e0d8'}`, borderRadius:10, background:myAvatar===a?'#fff5ee':'white', fontSize:21, cursor:'pointer' }}>{a}</button>
+          ))}
+        </div>
+        <div style={{ fontSize:11, fontWeight:700, color:'#888', marginBottom:8 }}>COLOR</div>
+        <div style={{ display:'flex', gap:8, marginBottom:16, flexWrap:'wrap' }}>
+          {PALETTE.map((c,i) => (
+            <button key={c} onClick={()=>setMyColorIdx(i)} style={{ width:36, height:36, borderRadius:'50%', background:c, border:i===myColorIdx?'3px solid #333':'3px solid transparent', cursor:'pointer' }} />
+          ))}
+        </div>
+        <Btn onClick={saveMe} style={{ width:'100%' }} color={mySaved?'#6BCB77':'#FF8C42'}>{mySaved?'✓ Saved!':'Save My Profile'}</Btn>
+        <NotificationBtn me={me} />
+        <BiometricSetupBtn uid={me.uid || me.id} displayName={me.name} />
+        <InstallBtn />
+      </Card>
+
+      {isParent && inviteCode && (
+        <Card style={{ marginBottom:14 }}>
+          <div style={{ fontWeight:900, fontSize:15, color:'#FF8C42', marginBottom:8 }}>🔗 Family Invite Code</div>
+          <div style={{ fontSize:13, color:'#888', marginBottom:12 }}>Share this code so family members can join on their own device.</div>
+          <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+            <div style={{ flex:1, background:'#fff5ee', border:'2px solid #FFB347', borderRadius:12, padding:'12px 16px', textAlign:'center', fontSize:26, fontWeight:900, letterSpacing:6, color:'#FF8C42' }}>{inviteCode}</div>
+            <Btn onClick={copyCode} color={copied?'#6BCB77':'#FF8C42'} style={{ padding:'12px 16px' }}>{copied?'✓':'Copy'}</Btn>
+          </div>
+        </Card>
+      )}
+
+      {isParent && (
+        <Card style={{ marginBottom:14 }}>
+          <div style={{ fontWeight:900, fontSize:15, color:'#FF8C42', marginBottom:12 }}>🏠 Family Name</div>
+          <Inp value={newFname} onChange={e=>setNewFname(e.target.value)} placeholder="Family name" style={{ marginBottom:12 }} />
+          <Btn onClick={()=>{ if(newFname.trim()){ saveFamilyName(newFname.trim()); setFSaved(true); setTimeout(()=>setFSaved(false),2500); } }} style={{ width:'100%' }} color={fSaved?'#6BCB77':'#FF8C42'}>{fSaved?'✓ Saved!':'Update Family Name'}</Btn>
+        </Card>
+      )}
+
+      {isParent && <AddMemberCard members={members} saveMembers={saveMembers} />}
+
+      {isParent && others.length > 0 && (
+        <Card style={{ marginBottom:14 }}>
+          <div style={{ fontWeight:900, fontSize:15, color:'#FF8C42', marginBottom:14 }}>👨‍👩‍👧 Family Members</div>
+          {others.map(m => (
+            <div key={m.id}>
+              {editing === m.id ? (
+                <div style={{ padding:'10px 0', borderBottom:'1px solid #f8f0ea' }}>
+                  <PhotoPicker photo={ePhoto} setPhoto={setEPhoto} colorIdx={eColorIdx} avatar={eAvatar} />
+                  <Inp value={eName} onChange={e=>setEName(e.target.value)} placeholder="Name" style={{ marginBottom:10 }} autoFocus />
+                  <div style={{ display:'flex', flexWrap:'wrap', gap:5, marginBottom:10 }}>
+                    {AVATARS.map(a => <button key={a} onClick={()=>setEAvatar(a)} style={{ width:36, height:36, border:`2px solid ${eAvatar===a?'#FF8C42':'#e8e0d8'}`, borderRadius:9, background:eAvatar===a?'#fff5ee':'white', fontSize:19, cursor:'pointer' }}>{a}</button>)}
+                  </div>
+                  <div style={{ display:'flex', gap:6, marginBottom:14, flexWrap:'wrap' }}>
+                    {PALETTE.map((c,i) => <button key={c} onClick={()=>setEColorIdx(i)} style={{ width:32, height:32, borderRadius:'50%', background:c, border:i===eColorIdx?'3px solid #333':'3px solid transparent', cursor:'pointer' }} />)}
+                  </div>
+                  {confirmDel===m.id ? (
+                    <div>
+                      <div style={{ fontWeight:700, color:'#333', marginBottom:10 }}>Remove {m.name}?</div>
+                      <div style={{ display:'flex', gap:8 }}>
+                        <Btn onClick={()=>doDelete(m.id)} color="#FF4757" style={{ flex:1 }}>Yes, Remove</Btn>
+                        <Btn onClick={()=>setConfirmDel(null)} color="#bbb" outline style={{ flex:1 }}>Cancel</Btn>
+                      </div>
+                    </div>
+                  ) : (
+                    <div style={{ display:'flex', gap:8 }}>
+                      <Btn onClick={saveEdit} color="#6BCB77" style={{ flex:1 }}>✓ Save</Btn>
+                      <Btn onClick={()=>setConfirmDel(m.id)} color="#FF4757" outline style={{ flex:1 }}>🗑 Remove</Btn>
+                      <Btn onClick={()=>setEditing(null)} color="#bbb" outline style={{ flex:1 }}>Cancel</Btn>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 0', borderBottom:'1px solid #f8f0ea' }}>
+                  <Avatar m={m} size={38} />
+                  <div style={{ flex:1 }}>
+                    <div style={{ fontWeight:700, color:'#333', fontSize:15 }}>{m.name}</div>
+                    <Chip color={m.role==='parent'?'#FF8C42':'#4D96FF'} label={m.role==='parent'?'Parent':'Kid'} />
+                  </div>
+                  <button onClick={()=>openEdit(m)} style={{ background:'none', border:'none', fontSize:18, cursor:'pointer', padding:4 }}>✏️</button>
+                </div>
+              )}
+            </div>
+          ))}
+        </Card>
+      )}
+
+      <Card>
+        <div style={{ fontWeight:900, fontSize:15, color:'#888', marginBottom:12 }}>Account</div>
+        <div style={{ fontSize:13, color:'#aaa', marginBottom:12 }}>Signed in via {FAuth.currentUser?.email || 'email'}</div>
+        <Btn onClick={onSignOut} color="#FF4757" outline style={{ width:'100%' }}>Sign Out</Btn>
+      </Card>
+    </div>
+  );
+}
+
+// ── AppMain ───────────────────────────────────────────────────────────────────
+
+function AppMain({ me, familyName, members, chores, shopping, messages, dinner, suggestions, events, tab, setTab, saveMembers, saveChores, saveShopping, saveMessages, saveDinner, saveSuggestions, saveFamilyName, saveEvents, inviteCode, activity, logActivity, onSignOut }) {
+  const isParent = me.role === 'parent';
+  const pendingApproval = chores.filter(c => c.status === 'completed').length;
+  let lastSeen = 0;
+  try { lastSeen = parseInt(sessionStorage.getItem('chat-seen-'+me.id)||'0'); } catch(e) {}
+  const unread = messages.filter(m => m.at > lastSeen && m.from !== me.id).length;
+
+  const [showMore, setShowMore] = useState(false);
+  const NAV_TABS = [
+    { id:'home',      icon:'🏠', label:'Home',     badge:0 },
+    { id:'chores',    icon:'✅', label:'Chores',   badge:isParent&&pendingApproval>0?pendingApproval:0 },
+    { id:'chat',      icon:'💬', label:'Chat',     badge:unread },
+    { id:'calendar',  icon:'📅', label:'Calendar', badge:0 },
+    { id:'more',      icon:'☰',  label:'More',     badge:0 },
+  ];
+  const MORE_ITEMS = [
+    { id:'allowance', icon:'💰', label:'Money',    color:'#6BCB77' },
+    { id:'shopping',  icon:'🛒', label:'Shopping', color:'#4D96FF' },
+    { id:'dinner',    icon:'🍽', label:'Dinner',   color:'#FFB347' },
+    { id:'account',   icon:'👤', label:'Account',  color:'#C77DFF' },
+  ];
+
+  const goTo = (id) => { setTab(id); setShowMore(false); };
+
+  return (
+    <div style={{ minHeight:'100vh', background:'#fdf6f0', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column' }}>
+      <div style={{ background:'linear-gradient(135deg,#FF8C42,#FF6FC8)', padding:'14px 18px', display:'flex', alignItems:'center', gap:12, boxShadow:'0 4px 16px rgba(255,140,66,.3)', flexShrink:0 }}>
+        <Avatar m={me} size={42} />
+        <div style={{ flex:1 }}>
+          <div style={{ color:'white', fontWeight:800, fontSize:16 }}>Hey, {me.name}! 👋</div>
+          <div style={{ color:'rgba(255,255,255,.8)', fontSize:12 }}>{familyName} Hub</div>
+        </div>
+      </div>
+
+      <div key={tab} className="tab-content" style={{ flex:1, overflowY:'auto', paddingBottom:70 }}>
+        {tab==='home'      && <HomeTab      me={me} members={members} chores={chores} shopping={shopping} messages={messages} activity={activity} events={events} familyName={familyName} setTab={goTo} />}
+        {tab==='chores'    && <ChoresTab    me={me} members={members} chores={chores} saveChores={saveChores} saveMembers={saveMembers} logActivity={logActivity} />}
+        {tab==='allowance' && <AllowanceTab me={me} members={members} saveMembers={saveMembers} messages={messages} saveMessages={saveMessages} logActivity={logActivity} />}
+        {tab==='shopping'  && <ShoppingTab  me={me} shopping={shopping} saveShopping={saveShopping} />}
+        {tab==='chat'      && <ChatTab      me={me} members={members} messages={messages} saveMessages={saveMessages} />}
+        {tab==='dinner'    && <DinnerTab    me={me} dinner={dinner} suggestions={suggestions} saveDinner={saveDinner} saveSuggestions={saveSuggestions} />}
+        {tab==='calendar'  && <CalendarTab  me={me} members={members} events={events} saveEvents={saveEvents} saveMessages={saveMessages} messages={messages} logActivity={logActivity} />}
+        {tab==='account'   && <AccountTab   me={me} members={members} saveMembers={saveMembers} familyName={familyName} saveFamilyName={saveFamilyName} inviteCode={inviteCode} onSignOut={onSignOut} />}
+      </div>
+
+      {/* More Menu overlay */}
+      {showMore && (
+        <div className="anim-fade-in" onClick={()=>setShowMore(false)} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.45)', zIndex:200, display:'flex', alignItems:'flex-end', justifyContent:'center' }}>
+          <div className="anim-fade-up" onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:480, background:'white', borderRadius:'24px 24px 0 0', padding:'20px 20px 36px' }}>
+            <div style={{ width:36, height:4, borderRadius:2, background:'#e0d0c8', margin:'0 auto 20px' }} />
+            <div style={{ fontWeight:900, fontSize:16, color:'#333', marginBottom:16 }}>More</div>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+              {MORE_ITEMS.map(item => (
+                <button key={item.id} onClick={()=>goTo(item.id)} style={{ display:'flex', alignItems:'center', gap:12, padding:'14px 16px', border:'none', borderRadius:16, background:item.color+'18', cursor:'pointer', fontFamily:'inherit', textAlign:'left' }}>
+                  <div style={{ width:40, height:40, borderRadius:12, background:item.color, display:'flex', alignItems:'center', justifyContent:'center', fontSize:20, flexShrink:0 }}>{item.icon}</div>
+                  <span style={{ fontWeight:800, fontSize:15, color:'#333' }}>{item.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Bottom nav */}
+      <div style={{ position:'fixed', bottom:0, left:'50%', transform:'translateX(-50%)', width:'100%', maxWidth:480, background:'white', borderTop:'1px solid #f0e4d8', display:'flex', boxShadow:'0 -4px 16px rgba(0,0,0,.08)', zIndex:100 }}>
+        {NAV_TABS.map(t => {
+          const isMore = t.id === 'more';
+          const isActive = isMore ? showMore : tab === t.id;
+          return (
+            <button key={t.id} onClick={()=>{ if(isMore){ setShowMore(!showMore); } else { setTab(t.id); setShowMore(false); } }} style={{ flex:1, border:'none', background:'transparent', padding:'10px 4px 8px', cursor:'pointer', display:'flex', flexDirection:'column', alignItems:'center', gap:2, fontFamily:'inherit', position:'relative' }}>
+              {t.badge > 0 && <div style={{ position:'absolute', top:6, right:'50%', transform:'translateX(14px)', background:'#FF4757', color:'white', borderRadius:10, fontSize:10, fontWeight:900, minWidth:16, height:16, display:'flex', alignItems:'center', justifyContent:'center', padding:'0 4px' }}>{t.badge}</div>}
+              <span style={{ fontSize:20 }}>{t.icon}</span>
+              <span style={{ fontSize:10, fontWeight:800, color:isActive?'#FF8C42':'#bbb' }}>{t.label}</span>
+              {isActive && <div style={{ width:20, height:3, borderRadius:2, background:'#FF8C42', marginTop:2 }} />}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ── Root ──────────────────────────────────────────────────────────────────────
+
+// ── Tutorial ─────────────────────────────────────────────────────────────────
+
+const TUTORIAL_SLIDES = [
+  {
+    emoji: '🏠',
+    title: 'Welcome to Werner Hub!',
+    body: 'Your family\'s all-in-one command center. Let\'s take a quick tour so you know where everything is.',
+    color: '#FF8C42'
+  },
+  {
+    emoji: '✅',
+    title: 'Chores',
+    body: 'Parents add chores and assign them to kids or anyone. Kids tap "Done!" when finished. Parents approve to credit their allowance automatically.',
+    color: '#4D96FF'
+  },
+  {
+    emoji: '💰',
+    title: 'Allowance',
+    body: 'Track each kid\'s balance here. Parents can add or subtract money manually. Kids can request a cash out — you\'ll get notified in chat!',
+    color: '#6BCB77'
+  },
+  {
+    emoji: '🛒',
+    title: 'Shopping List',
+    body: 'Add items to a shared grocery list. Tap any item to check it off. Clear completed items when you\'re done shopping.',
+    color: '#C77DFF'
+  },
+  {
+    emoji: '💬',
+    title: 'Family Chat',
+    body: 'Send messages to the whole family at once. You\'ll see a badge on the tab when there are unread messages.',
+    color: '#FF6FC8'
+  },
+  {
+    emoji: '🍽',
+    title: 'Dinner Planner',
+    body: 'Plan this week\'s meals on the calendar. Anyone can suggest dinner ideas — parents can assign them to days.',
+    color: '#FFB347'
+  },
+  {
+    emoji: '👤',
+    title: 'Your Account',
+    body: 'Edit your profile photo, avatar and color. Parents: find your family invite code here to add new members on other devices.',
+    color: '#00C9A7'
+  },
+  {
+    emoji: '🎉',
+    title: 'You\'re all set!',
+    body: 'Werner Hub is ready for your family. You can always add more family members from the Account tab.',
+    color: '#FF8C42',
+    last: true
+  }
+];
+
+function TutorialOverlay({ onDone }) {
+  const [slide, setSlide] = useState(0);
+  const [exiting, setExiting] = useState(false);
+  const current = TUTORIAL_SLIDES[slide];
+  const isLast = slide === TUTORIAL_SLIDES.length - 1;
+
+  const next = () => {
+    if (isLast) { finish(); return; }
+    setSlide(slide + 1);
+  };
+
+  const finish = () => {
+    setExiting(true);
+    try { localStorage.setItem('wh-tutorial-done', '1'); } catch(e) {}
+    setTimeout(() => onDone(), 350);
+  };
+
+  return (
+    <div style={{ position:'fixed', inset:0, zIndex:9999, background:'rgba(0,0,0,.6)', display:'flex', alignItems:'flex-end', justifyContent:'center', transition:'opacity .35s', opacity:exiting?0:1 }}>
+      <div style={{ width:'100%', maxWidth:480, background:'white', borderRadius:'28px 28px 0 0', padding:'28px 24px 40px', position:'relative' }}>
+
+        {/* Progress dots */}
+        <div style={{ display:'flex', justifyContent:'center', gap:6, marginBottom:24 }}>
+          {TUTORIAL_SLIDES.map((_,i) => (
+            <div key={i} onClick={()=>setSlide(i)} style={{ width:i===slide?20:7, height:7, borderRadius:4, background:i===slide?current.color:'#e8e0d8', transition:'all .25s', cursor:'pointer' }} />
+          ))}
+        </div>
+
+        {/* Content */}
+        <div style={{ textAlign:'center', marginBottom:28 }}>
+          <div style={{ fontSize:64, marginBottom:16, lineHeight:1 }}>{current.emoji}</div>
+          <div style={{ width:48, height:4, borderRadius:2, background:current.color, margin:'0 auto 16px' }} />
+          <h2 style={{ fontWeight:900, fontSize:22, color:'#222', marginBottom:12 }}>{current.title}</h2>
+          <p style={{ fontSize:15, color:'#666', lineHeight:1.6 }}>{current.body}</p>
+        </div>
+
+        {/* Buttons */}
+        <div style={{ display:'flex', gap:10 }}>
+          {!isLast && (
+            <button onClick={finish} style={{ flex:1, padding:'12px 0', border:'2px solid #e8e0d8', borderRadius:14, background:'white', color:'#bbb', fontWeight:800, fontSize:14, cursor:'pointer', fontFamily:'inherit' }}>
+              Skip
+            </button>
+          )}
+          <button onClick={next} style={{ flex:2, padding:'14px 0', border:'none', borderRadius:14, background:current.color, color:'white', fontWeight:900, fontSize:16, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 4px 16px ${current.color}55` }}>
+            {isLast ? '🎉 Let\'s Go!' : 'Next →'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BiometricLockScreen({ userName, userAvatar, userColor, onUnlock, onSignOut }) {
+  const [status, setStatus] = useState('idle');
+  const [supported, setSupported] = useState(true);
+
+  useEffect(() => {
+    if (!biometricSupported()) { setSupported(false); return; }
+    // Auto-prompt on mount
+    setTimeout(() => attemptUnlock(), 400);
+  }, []);
+
+  const attemptUnlock = async () => {
+    setStatus('scanning');
+    try {
+      const uid = FAuth.currentUser && FAuth.currentUser.uid;
+      await verifyBiometric(uid);
+      setStatus('success');
+      setTimeout(() => onUnlock(), 300);
+    } catch(e) {
+      setStatus(e.message === 'No credential registered' ? 'none' : 'failed');
+    }
+  };
+
+  return (
+    <div style={{ minHeight:'100vh', background:'linear-gradient(160deg,#FF8C42,#FF6FC8)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:32 }}>
+      <div style={{ marginBottom:24 }}>
+        <Avatar m={{ avatar:userAvatar, color:userColor }} size={80} />
+      </div>
+      <h2 style={{ color:'white', fontWeight:900, fontSize:22, marginBottom:6 }}>Welcome back, {userName}!</h2>
+      <p style={{ color:'rgba(255,255,255,.8)', fontSize:14, marginBottom:40 }}>Werner Hub is locked</p>
+
+      {status === 'success' && (
+        <div style={{ fontSize:52 }}>✅</div>
+      )}
+
+      {(status === 'idle' || status === 'failed' || status === 'none') && supported && (
+        <button onClick={attemptUnlock} style={{ width:100, height:100, borderRadius:'50%', background:'rgba(255,255,255,.2)', border:'3px solid rgba(255,255,255,.6)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', cursor:'pointer', marginBottom:16 }}>
+          <span style={{ fontSize:42 }}>👆</span>
+        </button>
+      )}
+
+      {status === 'scanning' && (
+        <div style={{ width:100, height:100, borderRadius:'50%', background:'rgba(255,255,255,.3)', border:'3px solid white', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:16 }}>
+          <span style={{ fontSize:42 }}>👆</span>
+        </div>
+      )}
+
+      {status === 'failed' && <p style={{ color:'rgba(255,255,255,.9)', fontSize:13, fontWeight:700, marginBottom:16, background:'rgba(255,71,87,.3)', padding:'8px 16px', borderRadius:10 }}>Biometric failed — try again</p>}
+      {status === 'none'   && <p style={{ color:'rgba(255,255,255,.8)', fontSize:13, marginBottom:16, textAlign:'center' }}>No biometric registered on this device.<br/>Sign in with your password instead.</p>}
+      {!supported && <p style={{ color:'rgba(255,255,255,.8)', fontSize:13, marginBottom:16 }}>Biometrics not supported on this device.</p>}
+
+      <p style={{ color:'rgba(255,255,255,.7)', fontSize:13, marginBottom:24 }}>
+        {status === 'scanning' ? 'Scanning…' : supported && status !== 'none' ? 'Tap to use fingerprint / Face ID' : ''}
+      </p>
+
+      <button onClick={onSignOut} style={{ background:'none', border:'none', color:'rgba(255,255,255,.6)', fontSize:13, fontWeight:700, cursor:'pointer', fontFamily:'inherit', marginTop:8 }}>
+        Sign in as someone else →
+      </button>
+    </div>
+  );
+}
+
+function BiometricSetupBtn({ uid, displayName }) {
+  const [state, setState] = useState('check');
+
+  useEffect(() => {
+    if (!biometricSupported()) { setState('unsupported'); return; }
+    PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable().then(function(ok) {
+      if (!ok) { setState('unsupported'); return; }
+      setState(getBiometricCredId(uid) ? 'enabled' : 'disabled');
+    }).catch(function() { setState('unsupported'); });
+  }, []);
+
+  const enable = async () => {
+    setState('registering');
+    try {
+      await registerBiometric(uid, displayName);
+      setState('enabled');
+    } catch(e) {
+      setState('failed');
+      setTimeout(() => setState('disabled'), 3000);
+    }
+  };
+
+  const disable = () => {
+    clearBiometricCredId(uid);
+    setState('disabled');
+  };
+
+  if (state === 'check' || state === 'unsupported') return null;
+
+  if (state === 'enabled') return (
+    <div style={{ marginTop:8 }}>
+      <div style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 14px', background:'#f0fdf4', borderRadius:12, border:'1.5px solid #6BCB77', marginBottom:6 }}>
+        <span>👆</span><div style={{ flex:1, fontWeight:800, color:'#6BCB77', fontSize:13 }}>Biometric login enabled!</div><span>✅</span>
+      </div>
+      <button onClick={disable} style={{ background:'none', border:'none', color:'#FF4757', fontSize:12, fontWeight:700, cursor:'pointer', fontFamily:'inherit', paddingLeft:4 }}>Remove biometric from this device</button>
+    </div>
+  );
+
+  if (state === 'registering') return (
+    <div style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 14px', background:'#fff8f3', borderRadius:12, border:'1.5px solid #FFB347', marginTop:8 }}>
+      <span>👆</span><div style={{ fontWeight:800, color:'#FFB347', fontSize:13 }}>Follow the prompt on your device…</div>
+    </div>
+  );
+
+  if (state === 'failed') return (
+    <div style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 14px', background:'#fff0f0', borderRadius:12, border:'1.5px solid #FF4757', marginTop:8 }}>
+      <span>❌</span><div style={{ fontWeight:800, color:'#FF4757', fontSize:13 }}>Setup failed. Try again.</div>
+    </div>
+  );
+
+  return (
+    <button onClick={enable} style={{ width:'100%', padding:'11px 0', border:'2px solid #FF8C42', borderRadius:12, background:'#fff8f3', color:'#FF8C42', fontWeight:800, fontSize:14, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:8, fontFamily:'inherit', marginTop:8 }}>
+      👆 Enable Fingerprint / Face ID
+    </button>
+  );
+}
+
+
+function WernerHub() {
+  const [authReady,   setAuthReady]   = useState(false);
+  const [authUser,    setAuthUser]    = useState(null);
+  const [authScreen,  setAuthScreen]  = useState('welcome');
+  const [familyId,    setFamilyId]    = useState(null);
+  const [memberId,    setMemberId]    = useState(null);
+  const [members,     setMembers]     = useState(null);
+  const [fname,       setFname]       = useState('Werner');
+  const [inviteCode,  setInviteCode]  = useState('');
+  const [chores,      setChores]      = useState([]);
+  const [shopping,    setShopping]    = useState([]);
+  const [messages,    setMessages]    = useState([]);
+  const [dinner,      setDinner]      = useState({});
+  const [suggestions, setSuggestions] = useState([]);
+  const [tab,         setTab]         = useState('home');
+  const [activity,    setActivity]    = useState([]);
+  const [events,      setEvents]      = useState([]);
+  const [locked,      setLocked]      = useState(false);
+  const [showTutorial, setShowTutorial] = useState(false);
+
+  // Auth state observer
+  useEffect(() => {
+    const unsub = FAuth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setAuthUser(user);
+        try {
+          const snap = await FDB.ref('users/' + user.uid).once('value');
+          if (snap.exists()) {
+            const data = JSON.parse(snap.val());
+            setFamilyId(data.familyId);
+            setMemberId(data.memberId);
+            // Lock with biometric if credential is registered on this device
+            if (biometricSupported() && getBiometricCredId(user.uid)) {
+              setLocked(true);
+            }
+          }
+        } catch(e) {}
+      } else {
+        setAuthUser(null);
+        setFamilyId(null);
+        setMemberId(null);
+        setMembers(null);
+      }
+      setAuthReady(true);
+    });
+    return () => unsub();
+  }, []);
+
+  // Family data listeners
+  useEffect(() => {
+    if (!familyId) return;
+    const db = makeFamilyDb(familyId);
+    const unsubs = [
+      db.listen('members',     v => {
+        setMembers(v||[]);
+        try {
+          if (!localStorage.getItem('wh-tutorial-done')) setShowTutorial(true);
+        } catch(e) {}
+      }),
+      db.listen('fname',       v => { if(v) setFname(v); }),
+      db.listen('inviteCode',  v => { if(v) setInviteCode(v); }),
+      db.listen('chores',      v => setChores(v||[])),
+      db.listen('shopping',    v => setShopping(v||[])),
+      db.listen('messages',    v => setMessages(v||[])),
+      db.listen('dinner',      v => setDinner(v||{})),
+      db.listen('suggestions', v => setSuggestions(v||[])),
+      db.listen('activity',    v => setActivity(v||[])),
+      db.listen('events',      v => setEvents(v||[])),
+    ];
+    return () => unsubs.forEach(u => u && u());
+  }, [familyId]);
+
+  const signOut = () => FAuth.signOut();
+
+  if (!authReady) return <Loading />;
+
+  if (!authUser) {
+    if (authScreen === 'welcome') return <WelcomeScreen onCreateFamily={()=>setAuthScreen('create')} onJoinFamily={()=>setAuthScreen('join')} onSignIn={()=>setAuthScreen('signin')} />;
+    if (authScreen === 'signin')  return <SignInScreen  onBack={()=>setAuthScreen('welcome')} />;
+    if (authScreen === 'create')  return <CreateFamilyScreen onBack={()=>setAuthScreen('welcome')} />;
+    if (authScreen === 'join')    return <JoinFamilyScreen   onBack={()=>setAuthScreen('welcome')} />;
+  }
+
+  if (!familyId || members === null) return <Loading />;
+
+  const me = members.find(m => m.id === memberId);
+  if (!me) return <Loading />; // wait until the right member is found
+
+  if (locked) return (
+    <BiometricLockScreen
+      userName={me.name}
+      userAvatar={me.avatar}
+      userColor={me.color}
+      onUnlock={() => setLocked(false)}
+      onSignOut={() => { setLocked(false); FAuth.signOut(); }}
+    />
+  );
+
+  const db = makeFamilyDb(familyId);
+  const saveMembers     = v => { setMembers(v);     db.set('members',v); };
+  const saveChores      = v => { setChores(v);      db.set('chores',v); };
+  const saveShopping    = v => { setShopping(v);    db.set('shopping',v); };
+  const saveMessages    = v => { setMessages(v);    db.set('messages',v); };
+  const saveDinner      = v => { setDinner(v);      db.set('dinner',v); };
+  const saveSuggestions = v => { setSuggestions(v); db.set('suggestions',v); };
+  const saveFamilyName  = v => { setFname(v);       db.set('fname',v); };
+  const saveActivity    = v => { setActivity(v);    db.set('activity',v); };
+  const saveEvents      = v => { setEvents(v);      db.set('events',v); };
+  const logActivity     = (type, text, icon) => {
+    const entry = { id:Date.now().toString(), type, text, icon, at:Date.now() };
+    const updated = [entry, ...activity].slice(0, 100);
+    setActivity(updated); db.set('activity', updated);
+  };
+  const freshMe = members.find(m => m.id === me.id) || me;
+
+  return (
+    <>
+      <AppMain
+      me={freshMe} familyName={fname} members={members} inviteCode={inviteCode}
+      chores={chores} shopping={shopping} messages={messages} dinner={dinner} suggestions={suggestions}
+      tab={tab} setTab={setTab}
+      saveMembers={saveMembers} saveChores={saveChores} saveShopping={saveShopping}
+      saveMessages={saveMessages} saveDinner={saveDinner} saveSuggestions={saveSuggestions}
+      saveFamilyName={saveFamilyName} saveEvents={saveEvents} events={events}
+      activity={activity} logActivity={logActivity} onSignOut={signOut}
+    />
+    {showTutorial && <TutorialOverlay onDone={() => setShowTutorial(false)} />}
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<WernerHub />);
+</script>
+</body>
+</html>
